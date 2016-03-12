@@ -18,7 +18,7 @@ function cdns_the_title($title, $id = null) {
     if (preg_match('/—|&#8211;|–/', $title)) {
     // if (strpos($title, '&#8211;') !== false) {
       list($artist, $product) = preg_split('/\s+(—|&#8211;|–)\s+/', $title);
-      return '<span class="product-title">' . $product . '</span> <small class="product-by">by <strong class="product-by-artist">' . $artist . '</strong></small>';
+      return '<span class="product-title">' . $product . '</span> <small class="product-by"><span class="product-by-by">by </span><strong class="product-by-artist">' . $artist . '</strong></small>';
     }
   }
 
@@ -37,6 +37,15 @@ add_filter( 'the_title', 'cdns_the_title', 99999, 2 );
 
 add_filter( 'wc_product_enable_dimensions_display', '__return_false' );
 
+
+function wc_custom_shop_archive_title( $title ) {
+  if ( is_shop() ) {
+    return str_replace( 'Products Archive', 'Shop', $title );
+  }
+
+  return $title;
+}
+add_filter( 'wp_title', 'wc_custom_shop_archive_title', 99999 );
 
 function sf_woo_breadcrumb_opts() {
   return array(

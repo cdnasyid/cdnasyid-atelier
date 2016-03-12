@@ -12,34 +12,51 @@ jQuery ($) ->
     $('.shipping-calculator-form select').select2()
     $('.woocommerce .widget select').select2()
 
-  # SHORTEN ARTIST NAMES
+  # # SHORTEN ARTIST NAMES
   # $('.product-details small strong').succinct { size: 25 }
 
   # PRODUCT THUMNAIL COVER CENTER
-  do ->
-    figure = $('.products .product .product-transition-fade')
-    figure_width = figure.width()
-    figure_height = figure.height()
+  # do ->
+  #   figure = $('.products .product .product-transition-fade')
+  #   figure_width = figure.innerWidth()
+  #   figure_height = figure.innerHeight()
+  #
+  #   figure.find('.img-wrap').each ->
+  #     wrap_width = $(this).innerWidth()
+  #     wrap_height = $(this).innerHeight()
+  #
+  #     console.log figure_width, wrap_width, figure_height, wrap_height
+  #
+  #     if wrap_width < figure_width
+  #       scale = figure_width / wrap_width
+  #       $(this).css {
+  #         'transform': "scale(#{scale})"
+  #         'transform-origin': 'top'
+  #       }
+  #
+  #     else if wrap_height < figure_height
+  #       scale = figure_height / wrap_height
+  #       $(this).css {
+  #         'transform': "scale(#{scale})"
+  #         'transform-origin': 'top'
+  #       }
 
-    figure.find('.img-wrap').each ->
-      wrap_width = $(this).width()
-      wrap_height = $(this).height()
 
-      if wrap_width < figure_width
-        scale = figure_width / wrap_width
-        $(this).css {
-          'transform': "scale(#{scale})"
-          'transform-origin': 'top'
-        }
+  setProductArtistMaxWidth = ->
+    $('.woocommerce .products .product').each ->
+      product_by = $(this).find('.product-by')
+      product_by_by = product_by.find('.product-by-by')
+      product_by_artist = product_by.find('.product-by-artist')
+      if product_by.length
+        product_by_width = product_by.outerWidth()
+        product_by_by_width = product_by_by.outerWidth()
+        product_by_artist_width = product_by_width - product_by_by_width - 2
 
-      if wrap_height < figure_height
-        scale = figure_height / wrap_height
-        $(this).css {
-          'transform': "scale(#{scale})"
-          'transform-origin': 'top'
-        }
+        product_by_artist.css { 'max-width': product_by_artist_width + 'px' }
 
-    # $('.products .product .product-transition-fade .img-wrap img').imageScale()
+  setProductArtistMaxWidth()
+  $(window).smartresize setProductArtistMaxWidth
+
 
   # MOVE CATEGORY DESCRIPTION TO FANCY HEADER
   cat_desc = $('.tax-product_cat .term-description')

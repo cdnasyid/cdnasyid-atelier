@@ -57,6 +57,24 @@ input[type="number"],
   color: $black;
 }
 
+textarea:focus,
+input:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+.bypostauthor .comment-wrap .comment-avatar,
+.search-form input:focus,
+.wpcf7 input:focus,
+.wpcf7 textarea:focus,
+.ginput_container input:focus,
+.ginput_container textarea:focus,
+.mymail-form input:focus,
+.mymail-form textarea:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus {
+  border: 1px solid rgba($black, .2);
+}
+
 .woocommerce .coupon input.input-text,
 .woocommerce-cart table.cart td.actions .coupon .input-text {
   height: 44px;

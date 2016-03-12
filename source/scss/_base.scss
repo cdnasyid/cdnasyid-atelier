@@ -188,6 +188,10 @@ nav.std-menu ul.sub-menu>li>a, nav.std-menu ul.sub-menu>li>div.current-language 
 
 #copyright .text-left {
   font-size: .9rem;
+
+  @media only screen and (max-width: 767px) {
+    line-height: 1.4;
+  }
 }
 
 #copyright nav .menu li {
@@ -195,6 +199,10 @@ nav.std-menu ul.sub-menu>li>a, nav.std-menu ul.sub-menu>li>div.current-language 
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
+
+  @media only screen and (max-width: 767px) {
+    line-height: 1.4;
+  }
 }
 
 // MISC

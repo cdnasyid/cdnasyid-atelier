@@ -101,7 +101,7 @@ add_action( 'woocommerce_single_product_summary', 'cdns_single_whatsapp', 32 );
 
 function cdns_show_attribute_links() {
   global $post;
-  $attribute_names = array( 'pa_artist', 'pa_producer', 'pa_book-author', 'pa_book-publisher' ); // Insert attribute names here
+  $attribute_names = array( 'pa_artist', 'pa_label', 'pa_book-author', 'pa_publisher' ); // Insert attribute names here
   foreach ( $attribute_names as $attribute_name ) {
     $taxonomy = get_taxonomy( $attribute_name );
     if ( $taxonomy && ! is_wp_error( $taxonomy ) ) {

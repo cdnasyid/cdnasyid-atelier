@@ -1,0 +1,329 @@
+@import 'mdc';
+
+$black: $clr-grey-900;
+$white: #fff;
+$blue: $clr-blue;
+$grey: $clr-grey-600;
+$lightgrey: $clr-grey-200;
+$orange: $clr-orange;
+$turquoise: $clr-cyan;
+$green: $clr-teal-400;
+$green: $clr-green-400;
+$pink: $clr-pink;
+$gold: $clr-amber;
+$purple: $clr-deep-purple-300;
+$midnight: $clr-blue-grey-900;
+$yellow: $clr-yellow;
+$red: $clr-red;
+
+// $black: #212121;
+// $white: #fff;
+// $blue: #00bff3;
+// $grey: #444;
+// $lightgrey: #e4e4e4;
+// $orange: #ff7534;
+// $turquoise: #00d1c5;
+// $green: #37ba85;
+// $pink: #fe504f;
+// $gold: #ffd56c;
+// $purple: #8e7de5;
+// $midnight: #27303d;
+// $yellow: #f5c55e;
+// $red: #f45550;
+
+
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+a.sf-button.standard {
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.sf-button.large {
+  // font-family: 'Oswald', 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  padding: 14px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 3px;
+}
+
+a.sf-button.sf-button-has-icon.large > i {
+  font-size: 30px;
+  line-height: 30px;
+  vertical-align: -2px;
+}
+
+a.sf-button.large.sf-icon-reveal {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+a.sf-button.large.sf-icon-reveal > i {
+    font-size: 30px;
+    line-height: 60px;
+    right: 50px;
+}
+
+// BUTTON COLORS
+
+a.sf-button.black {
+  border-color: $black;
+  background-color: $black;
+  color: $white;
+}
+a.sf-button.white {
+  border-color: $white;
+  background-color: $white;
+  color: $black !important;
+}
+a.sf-button.blue {
+  border-color: $blue;
+  background-color: $blue;
+}
+a.sf-button.grey {
+  border-color: $grey;
+  background-color: $grey;
+}
+a.sf-button.lightgrey {
+  border-color: $lightgrey;
+  background-color: $lightgrey;
+  color: $black;
+}
+a.sf-button.orange {
+  border-color: $orange;
+  background-color: $orange;
+  color: $white;
+}
+a.sf-button.turquoise {
+  border-color: $turquoise;
+  background-color: $turquoise;
+  color: $white;
+}
+a.sf-button.green {
+  border-color: $green;
+  background-color: $green;
+  color: $white;
+}
+a.sf-button.pink {
+  border-color: $pink;
+  background-color: $pink;
+  color: $white;
+}
+a.sf-button.gold {
+  border-color: $gold;
+  background-color: $gold;
+  color: $black;
+}
+a.sf-button.transparent-light {
+  border: 2px solid $white;
+  border: 2px solid rgba($white, .5);
+  color: $white;
+}
+a.sf-button.transparent-light:hover {
+  background: $white;
+  border-color: $white;
+}
+a.sf-button.transparent-dark {
+  border: 2px solid $black;
+  border: 2px solid rgba($black, .2);
+}
+a.sf-button.transparent-dark:hover {
+  background: $black;
+  border-color: $black;
+}
+a.sf-button.purple {
+  border-color: $purple;
+  background-color: $purple;
+  color: $white;
+}
+a.sf-button.midnight {
+  border-color: $midnight;
+  background-color: $midnight;
+  color: $white;
+}
+a.sf-button.yellow {
+  border-color: $yellow;
+  background-color: $yellow;
+  color: $white;
+}
+a.sf-button.red {
+  border-color: $red;
+  background-color: $red;
+  color: $white;
+}
+
+
+
+a.sf-button.sf-icon-reveal.black {
+  background-color: $black;
+}
+a.sf-button.sf-icon-reveal.white {
+  background-color: $white;
+  color: $black;
+}
+a.sf-button.sf-icon-reveal.blue {
+  background-color: $blue;
+}
+a.sf-button.sf-icon-reveal.grey {
+  background-color: $grey;
+}
+a.sf-button.sf-icon-reveal.lightgrey {
+  background-color: $lightgrey;
+}
+a.sf-button.sf-icon-reveal.orange {
+  background-color: $orange;
+}
+a.sf-button.sf-icon-reveal.turquoise {
+  background-color: $turquoise;
+}
+a.sf-button.sf-icon-reveal.green {
+  background-color: $green;
+}
+a.sf-button.sf-icon-reveal.pink {
+  background-color: $pink;
+}
+a.sf-button.sf-icon-reveal.gold {
+  background-color: $gold;
+}
+
+
+
+a.sf-button.bordered {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+a.sf-button.bordered {
+  background: none;
+}
+a.sf-button.bordered.black {
+  color: $black;
+  border-color: $black;
+}
+a.sf-button.bordered.white {
+  color: $white;
+  border-color: $white;
+}
+a.sf-button.bordered.blue {
+  color: $blue;
+  border-color: $blue;
+}
+a.sf-button.bordered.grey {
+  color: $grey;
+  border-color: $grey;
+}
+a.sf-button.bordered.lightgrey {
+  color: $lightgrey;
+  border-color: $lightgrey;
+}
+a.sf-button.bordered.orange {
+  color: $orange;
+  border-color: $orange;
+}
+a.sf-button.bordered.turquoise {
+  color: $turquoise;
+  border-color: $turquoise;
+}
+a.sf-button.bordered.green {
+  color: $green;
+  border-color: $green;
+}
+a.sf-button.bordered.pink {
+  color: $pink;
+  border-color: $pink;
+}
+a.sf-button.bordered.gold {
+  color: $gold;
+  border-color: $gold;
+}
+a.sf-button.bordered.white {
+  color: $white !important;
+}
+a.sf-button.bordered.white:hover {
+  color: $black !important;
+}
+a.sf-button.bordered.black:hover, a.sf-button.bordered.blue:hover, a.sf-button.bordered.grey:hover, a.sf-button.bordered.orange:hover, a.sf-button.bordered.turquoise:hover, a.sf-button.bordered.green:hover, a.sf-button.bordered.pink:hover {
+  color: $white;
+}
+a.sf-button.bordered.gold:hover, a.sf-button.bordered.lightgrey:hover, a.sf-button.bordered.gold:hover {
+  color: $black;
+}
+
+
+
+
+a.sf-button.black:hover {
+  background-color: shade($black, 15);
+  border-color: shade($black, 15);
+}
+a.sf-button.white:hover {
+  background-color: $lightgrey;
+  border-color: $lightgrey;
+}
+a.sf-button.blue:hover {
+  background-color: shade($blue, 15);
+  border-color: shade($blue, 15);
+}
+a.sf-button.grey:hover {
+  background-color: shade($grey, 15);
+  border-color: shade($grey, 15);
+}
+a.sf-button.lightgrey:hover {
+  background-color: shade($lightgrey, 15);
+  border-color: shade($lightgrey, 15);
+}
+a.sf-button.orange:hover {
+  background-color: shade($orange, 15);
+  border-color: shade($orange, 15);
+}
+a.sf-button.turquoise:hover {
+  background-color: shade($turquoise, 15);
+  border-color: shade($turquoise, 15);
+}
+a.sf-button.green:hover {
+  background-color: shade($green, 15);
+  border-color: shade($green, 15);
+}
+a.sf-button.pink:hover {
+  background-color: shade($pink, 15);
+  border-color: shade($pink, 15);
+}
+a.sf-button.gold:hover {
+  background-color: shade($gold, 15);
+  border-color: shade($gold, 15);
+}
+a.sf-button.purple:hover {
+  background-color: shade($purple, 15);
+  border-color: shade($purple, 15);
+}
+a.sf-button.midnight:hover {
+  background-color: shade($midnight, 15);
+  border-color: shade($midnight, 15);
+}
+a.sf-button.yellow:hover {
+  background-color: shade($yellow, 15);
+  border-color: shade($yellow, 15);
+}
+a.sf-button.red:hover {
+  background-color: shade($red, 15);
+  border-color: shade($red, 15);
+}

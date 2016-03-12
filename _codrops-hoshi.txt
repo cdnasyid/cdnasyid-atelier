@@ -1,0 +1,7 @@
+<div class="input input--hoshi">
+  [text* your-name id:your-name class:input__field class:input__field--hoshi]<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="your-name"><span class="input__label-content input__label-content--hoshi">Name *</span></label>
+</div>
+
+<div class="input input--hoshi">
+  [email* your-email id:your-email class:input__field class:input__field--hoshi]<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="your-email"><span class="input__label-content input__label-content--hoshi">Email *</span></label>
+</div>

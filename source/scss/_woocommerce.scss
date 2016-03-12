@@ -35,6 +35,170 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
 
 // PRODUCTS GRID
 
+
+.woocommerce .sidebar {
+  &.col-sm-12 {
+  	width: 100%;
+  }
+  &.col-sm-6 {
+  	width: 50%;
+  }
+  &.col-sm-5 {
+  	width: 41.66666667%;
+  }
+  &.col-sm-4 {
+  	width: 33.33333333%;
+  }
+  &.col-sm-3 {
+  	width: 25%;
+  }
+  &.col-sm-2 {
+  	width: 16.66666667%;
+  }
+  &.col-sm-1 {
+  	width: 8.33333333%;
+  }
+  &.col-sm-sf-5 {
+  	width: 20%;
+  }
+
+  @media only screen and (max-width: 991px) {
+    width: 33.33% !important;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 50% !important;
+  }
+}
+
+.woocommerce .sidebar .widget {
+  padding: 0 2rem 3rem !important;
+
+  .title-wrap {
+    margin-bottom: 2em;
+
+    h3 {
+      @include font-etica(true);
+    }
+    h3 span {
+      border: 0;
+    }
+  }
+
+  .select2-container {
+    width: 100% !important;
+  }
+
+  &.widget_brand_thumbnails .brand-thumbnails {
+    li {
+      height: 100px;
+      text-align: center;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        max-height: 100px;
+      }
+    }
+  }
+}
+
+.woocommerce .widget_product_categories {
+  ul {
+    // margin: 0;
+    margin-left: -10px;
+  }
+
+  ul li {
+    display: inline-block;
+    border: 0;
+  }
+
+  ul li a {
+    position: relative;
+    @include font-etica(true);
+    padding: .3em .5em .2em;
+    margin-right: 2px;
+    margin-bottom: 4px;
+    z-index: 0;
+
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      z-index: -1;
+      background: $orange;
+      border-radius: 3px;
+      transition: all .3s ease;
+    }
+
+    &:hover {
+      color: #fff;
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+
+  ul li.current-cat a {
+    color: #fff;
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+.sf-mobile-shop-filters .widget {
+  border: 0;
+  margin: 2rem 0;
+
+  &.widget_product_categories {
+    text-align: center;
+  }
+}
+
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+  border: 3px solid #000;
+  background: #fff;
+}
+
+// .woocommerce .sidebar .widget {
+//   &.cdnclr-accent {
+//     span.highlighted {
+//       background: $orange !important;
+//     }
+//   }
+//
+//   &.cdnclr-turquoise {
+//     span.highlighted {
+//       background: $turquoise !important;
+//     }
+//   }
+//
+//   &.cdnclr-green {
+//     span.highlighted {
+//       background: $green !important;
+//     }
+//   }
+//
+//   &.cdnclr-blue {
+//     span.highlighted {
+//       background: $blue !important;
+//     }
+//   }
+// }
+
+
 .woocommerce .colorful-bar {
   margin-top: -20px;
   margin-bottom: 8px;
@@ -49,7 +213,22 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
   }
 }
 
-.woocommerce .products .product {
+.woocommerce ul.products li.product {
+
+  padding: 0 10px;
+  margin: 0;
+
+  @media only screen and (max-width: 991px) {
+    width: 33.33% !important;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 50% !important;
+  }
+
+  @media only screen and (max-width: 479px) {
+    width: 100% !important;  
+  }
 
   h3 {
     line-height: 1.2em !important;
@@ -155,7 +334,7 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
   }
 }
 
-.woocommerce .products .product.product-layout-list {
+.woocommerce ul.products li.product.product-layout-list {
   figure .cart-overlay {
     @media only screen and (max-width: 991px) {
       bottom: 5px;
@@ -196,7 +375,7 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
     }
   }
 
-  .woocommerce .products .product .product-details {
+  .woocommerce ul.products li.product .product-details {
     a {
       color: #fff;
     }
@@ -742,133 +921,6 @@ table.shop_table tr.total td {
 .woo-aux-options {
   border: 0 !important;
 }
-
-.woocommerce .sidebar .widget {
-  padding: 0 2rem 3rem !important;
-
-  .title-wrap {
-    margin-bottom: 2em;
-
-    h3 {
-      @include font-etica(true);
-    }
-    h3 span {
-      border: 0;
-    }
-  }
-
-  .select2-container {
-    width: 100% !important;
-  }
-
-  &.widget_brand_thumbnails .brand-thumbnails {
-    li {
-      height: 100px;
-      text-align: center;
-      padding: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        display: block;
-        width: auto;
-        max-width: 100%;
-        max-height: 100px;
-      }
-    }
-  }
-}
-
-.woocommerce .widget_product_categories {
-  ul {
-    // margin: 0;
-    margin-left: -10px;
-  }
-
-  ul li {
-    display: inline-block;
-    border: 0;
-  }
-
-  ul li a {
-    position: relative;
-    @include font-etica(true);
-    padding: .3em .5em .2em;
-    margin-right: 2px;
-    margin-bottom: 4px;
-    z-index: 0;
-
-    &:after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      z-index: -1;
-      background: $orange;
-      border-radius: 3px;
-      transition: all .3s ease;
-    }
-
-    &:hover {
-      color: #fff;
-      &:after {
-        width: 100%;
-      }
-    }
-  }
-
-  ul li.current-cat a {
-    color: #fff;
-    &:after {
-      width: 100%;
-    }
-  }
-}
-
-.sf-mobile-shop-filters .widget {
-  border: 0;
-  margin: 2rem 0;
-
-  &.widget_product_categories {
-    text-align: center;
-  }
-}
-
-.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
-  width: 14px;
-  height: 14px;
-  border-radius: 14px;
-  border: 3px solid #000;
-  background: #fff;
-}
-
-// .woocommerce .sidebar .widget {
-//   &.cdnclr-accent {
-//     span.highlighted {
-//       background: $orange !important;
-//     }
-//   }
-//
-//   &.cdnclr-turquoise {
-//     span.highlighted {
-//       background: $turquoise !important;
-//     }
-//   }
-//
-//   &.cdnclr-green {
-//     span.highlighted {
-//       background: $green !important;
-//     }
-//   }
-//
-//   &.cdnclr-blue {
-//     span.highlighted {
-//       background: $blue !important;
-//     }
-//   }
-// }
 
 .woocommerce #payment div.payment_box {
   background: $lightgrey;

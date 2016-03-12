@@ -23,6 +23,10 @@ a.sf-button.large {
   font-style: italic;
 }
 
+.header-wrap #header-section .is-sticky #header.sticky-header {
+  background: rgba($midnight, .95);
+}
+
 // HEADER OVERLAYS
 
 .overlay-diag {
@@ -121,6 +125,11 @@ h1.entry-title {
 
 table thead th {
   letter-spacing: 1px;
+}
+
+.tooltip-inner {
+  padding: 8px 13px;
+  border-radius: 2px;
 }
 
 // NAVIGATIONS

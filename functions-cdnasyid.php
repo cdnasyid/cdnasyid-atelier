@@ -40,7 +40,7 @@ add_filter( 'wc_product_enable_dimensions_display', '__return_false' );
 
 function sf_woo_breadcrumb_opts() {
   return array(
-    'delimiter'   => '<span class="seperator"> / </span>',
+    'delimiter'   => '<span class="seperator"> - </span>',
     'wrap_before' => '<nav class="woocommerce-breadcrumb" ' . ( is_single() ? 'itemprop="breadcrumb"' : '' ) . '>',
     'wrap_after'  => '</nav>',
     'before'      => '',

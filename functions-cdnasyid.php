@@ -201,14 +201,13 @@ add_action( 'woocommerce_product_meta_end', 'cdns_show_attribute_links' );
 
 
 
-$asset_version = '1.0.14';
+$asset_version = '1.1.0';
 
 function cdns_stylesheets() {
   global $asset_version;
 
   if ( is_admin() ) return;
 
-  echo '<link rel="stylesheet" href="' . get_stylesheet_directory_uri() . '/css/fonts.css?ver=' . $asset_version . '" type="text/css" media="all">';
   echo '<link rel="stylesheet" href="' . get_stylesheet_directory_uri() . '/css/cdnasyid.css?ver=' . $asset_version . '" type="text/css" media="all">';
 }
 add_action('wp_head', 'cdns_stylesheets', 200);
@@ -241,9 +240,6 @@ function cdns_scripts() {
   // match height
   wp_register_script('matchheight-script', get_stylesheet_directory_uri() . '/js/jquery.matchHeight-min.js', array(), $asset_version, true);
   wp_enqueue_script('matchheight-script');
-
-  wp_register_script('cdnasyid-overrides', get_stylesheet_directory_uri() . '/js/cdnasyid-overrides.js', array(), $asset_version, true);
-  wp_enqueue_script('cdnasyid-overrides');
 
   wp_register_script('cdnasyid', get_stylesheet_directory_uri() . '/js/cdnasyid.js', array(), $asset_version, true);
   wp_enqueue_script('cdnasyid');

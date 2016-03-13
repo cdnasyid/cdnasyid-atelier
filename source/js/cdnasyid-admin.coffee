@@ -1,5 +1,5 @@
 jQuery ($) ->
-  $('#wpbody-content .wrap').find('.updated, .error').each ->
+  $('#wpbody-content').find('.updated, .error').each ->
     content = $(this).html()
 
     if content.indexOf('WooThemes plugins') > -1

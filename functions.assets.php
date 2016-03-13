@@ -1,7 +1,7 @@
 <?php
 
 // ASSETS
-$asset_version = '1.1.0';
+$asset_version = '1.1.1';
 
 function cdns_stylesheets() {
   global $asset_version;

@@ -59,7 +59,7 @@ jQuery ($) ->
     color
 
   productGrid = ->
-    $('.bg-dark .products .product').addClass('dark')
+    $('#home-tilawah .products .product').addClass('dark')
 
     $('.woocommerce .products .product').each ->
 

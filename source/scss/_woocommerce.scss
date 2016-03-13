@@ -4,6 +4,19 @@
   font-weight: 400;
 }
 
+.bag-product {
+  border-bottom: 1px solid $lightgrey;
+  margin: 0;
+  padding: 20px 30px;
+  text-transform: none;
+  line-height: 1;
+
+  .bag-product-title a {
+    line-height: 1;
+    margin-bottom: .5em;
+  }
+}
+
 .woocommerce-wishlist .container .container {
   padding: 0;
   width: 100%;
@@ -428,7 +441,7 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
 
 // FOR DARK BGS
 .bg-dark {
-  background: #333032;
+  background-color: #333032;
   color: #fff;
 
   h1, h2, h3, h4, h5, h6 {

@@ -12,10 +12,11 @@ function cdns_widget_title($title) {
 add_filter('widget_title',  'cdns_widget_title');
 
 
-function cdns_the_title($title, $id = null) {
-  if ( is_admin() ) return $title;
+function cdns_the_title($title, $id = null, $qvplugin = false) {
+  if ( is_admin() && !$qvplugin ) return $title;
 
   $post_type = get_post_type($id);
+
   if ('product' == $post_type) {
     $title = preg_replace('/\s+/', ' ', $title);
 

@@ -4,16 +4,24 @@
   font-weight: 400;
 }
 
-.bag-product {
-  border-bottom: 1px solid $lightgrey;
-  margin: 0;
-  padding: 20px 30px;
-  text-transform: none;
-  line-height: 1;
+.bag-contents {
+  width: auto;
 
-  .bag-product-title a {
+  .bag-product {
+    border-bottom: 1px solid $lightgrey;
+    margin: 0;
+    padding: 20px 30px;
+    text-transform: none;
     line-height: 1;
-    margin-bottom: .5em;
+
+    .bag-product-title a {
+      line-height: 1;
+      margin-bottom: .5em;
+    }
+
+    a.remove {
+      right: 30px;
+    }
   }
 }
 
@@ -44,6 +52,13 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
   left: 30px !important;
   top: 40px !important;
   background: $pink;
+}
+
+#jckqv_summary {
+  small.product-by {
+    display: block;
+    opacity: .5;
+  }
 }
 
 // PRODUCTS GRID
@@ -260,17 +275,23 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
       a[class*="product_type"],
       .yith-wcwl-add-to-wishlist a,
       .jckqvBtn {
-        padding: 0;
-        height: 46px;
-        width: 46px;
-        position: relative;
-        text-align: center;
-        font-size: 22px;
+        // padding: 0;
+        // height: 48px;
+        // width: 48px;
+        // position: relative;
+        // font-size: 22px;
+        // text-align: center;
 
         i {
-          @include scut-center-transform;
-          font-size: inherit;
+          // font-size: inherit;
         }
+      }
+
+      a[class*="product_type"],
+      .yith-wcwl-add-to-wishlist a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .add-to-cart-wrap {
@@ -284,7 +305,7 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
 
         &:before {
           text-indent: 0;
-          font-size: inherit;
+          // font-size: inherit;
           line-height: 20px;
           margin-top: 0;
           margin-left: 0;
@@ -705,68 +726,6 @@ span.amount .amount-decimal {
       }
     }
 
-    .product_meta {
-      font-size: .9rem;
-
-      > span {
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: 600;
-        line-height: 1rem;
-
-        > span {
-          text-transform: none;
-          letter-spacing: 0;
-          font-weight: 400;
-        }
-
-        &:before {
-          font-family: FontAwesome;
-          content: "\f292";
-          display: inline-block;
-          padding-right: 3px;
-          vertical-align: middle;
-          font-weight: normal;
-          width: 1.2rem;
-        }
-      }
-
-      span.sku_wrapper:before {
-        content: "\f292";
-      }
-
-      span.posted_in:before {
-        content: "\f07b";
-      }
-
-      span.tagged_as:before {
-        content: "\f02c";
-      }
-
-      span.tagged_as {
-        margin-bottom: 2rem;
-      }
-
-      span.pa_artist:before {
-        content: "\f130";
-      }
-
-      span.pa_producer:before {
-        font-family: sans-serif;
-        content: "℗";
-        font-size: 1.2rem;
-        line-height: 1rem;
-      }
-
-      span.pa_book-author:before {
-        content: "\f040";
-      }
-
-      span.pa_book-publisher:before {
-        content: "\f02d";
-      }
-    }
-
     .sf-share-counts {
       border: 0;
       padding-bottom: 0 !important;
@@ -782,6 +741,71 @@ span.amount .amount-decimal {
 
     .upsells .upsell-heading-link i {
       vertical-align: 2px;
+    }
+  }
+}
+
+.single-product .product .summary,
+#jckqv_summary {
+  .product_meta {
+    font-size: .9rem;
+
+    > span {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      line-height: 1rem;
+
+      > span {
+        text-transform: none;
+        letter-spacing: 0;
+        font-weight: 400;
+      }
+
+      &:before {
+        font-family: FontAwesome;
+        content: "\f292";
+        display: inline-block;
+        padding-right: 3px;
+        vertical-align: middle;
+        font-weight: normal;
+        width: 1.2rem;
+      }
+    }
+
+    span.sku_wrapper:before {
+      content: "\f292";
+    }
+
+    span.posted_in:before {
+      content: "\f07b";
+    }
+
+    span.tagged_as:before {
+      content: "\f02c";
+    }
+
+    span.tagged_as {
+      margin-bottom: 2rem;
+    }
+
+    span.pa_artist:before {
+      content: "\f130";
+    }
+
+    span.pa_producer:before {
+      font-family: sans-serif;
+      content: "℗";
+      font-size: 1.2rem;
+      line-height: 1rem;
+    }
+
+    span.pa_book-author:before {
+      content: "\f040";
+    }
+
+    span.pa_book-publisher:before {
+      content: "\f02d";
     }
   }
 }

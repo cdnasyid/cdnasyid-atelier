@@ -14,8 +14,6 @@
   ================================================== */
   function atelier_child_enqueue_styles() {
       wp_enqueue_style( 'atelier-parent-style', get_template_directory_uri() . '/style.css' );
-      // wp_enqueue_style( 'cdnasyid', get_stylesheet_directory_uri() . '/css/cdnasyid.min.css', 'atelier-parent-style', '1.0.8', 'all');
-
   }
   add_action( 'wp_enqueue_scripts', 'atelier_child_enqueue_styles' );
 
@@ -104,7 +102,6 @@
   // add_filter('sf_wishlist_icon', 'custom_wishlist_icon', 100);
   // add_filter('sf_add_to_wishlist_icon', 'custom_wishlist_icon', 100);
   // add_filter('sf_wishlist_menu_icon', 'custom_wishlist_icon', 100);
-
 
 
   include('functions-cdnasyid.php');

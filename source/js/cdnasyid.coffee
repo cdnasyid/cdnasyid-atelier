@@ -12,6 +12,8 @@ jQuery ($) ->
     $('.shipping-calculator-form select').select2()
     $('.woocommerce .widget select').select2()
 
+  $('figure .cart-overlay .shop-actions > *').addClass('shop-action')
+
   # # SHORTEN ARTIST NAMES
   # $('.product-details small strong').succinct { size: 25 }
 

@@ -1,5 +1,6 @@
 <?php
 
+
 function cdns_uri($relative_uri = "") {
   return get_stylesheet_directory_uri() . $relative_uri;
 }

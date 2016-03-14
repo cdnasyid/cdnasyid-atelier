@@ -14,36 +14,7 @@ jQuery ($) ->
 
   $('figure .cart-overlay .shop-actions > *').addClass('shop-action')
 
-  # # SHORTEN ARTIST NAMES
-  # $('.product-details small strong').succinct { size: 25 }
-
-  # PRODUCT THUMNAIL COVER CENTER
-  # do ->
-  #   figure = $('.products .product .product-transition-fade')
-  #   figure_width = figure.innerWidth()
-  #   figure_height = figure.innerHeight()
-  #
-  #   figure.find('.img-wrap').each ->
-  #     wrap_width = $(this).innerWidth()
-  #     wrap_height = $(this).innerHeight()
-  #
-  #     console.log figure_width, wrap_width, figure_height, wrap_height
-  #
-  #     if wrap_width < figure_width
-  #       scale = figure_width / wrap_width
-  #       $(this).css {
-  #         'transform': "scale(#{scale})"
-  #         'transform-origin': 'top'
-  #       }
-  #
-  #     else if wrap_height < figure_height
-  #       scale = figure_height / wrap_height
-  #       $(this).css {
-  #         'transform': "scale(#{scale})"
-  #         'transform-origin': 'top'
-  #       }
-
-
+  # SET MAX WIDTH OF ARTISTNAME
   setProductArtistMaxWidth = ->
     $('.woocommerce .products .product').each ->
       product_by = $(this).find('.product-by')
@@ -58,7 +29,6 @@ jQuery ($) ->
 
   setProductArtistMaxWidth()
   $(window).smartresize setProductArtistMaxWidth
-
 
   # MOVE CATEGORY DESCRIPTION TO FANCY HEADER
   cat_desc = $('.tax-product_cat .term-description')
@@ -87,12 +57,8 @@ jQuery ($) ->
   $('.menu .non-link a').each ->
     $(this).closest('li').html($(this).html())
 
-  # $('a[href^="#"]').on 'click', (e) ->
-  #   e.preventDefault()
-  #   target = @hash
-  #   $target = $(target)
-  #   $('html, body').stop().animate { 'scrollTop': $target.offset().top }, 500, 'swing', ->
-  #     window.location.hash = target
+  # TILAWAH MORE LINK
+  $('#home-tilawah .woocommerce.product_list_widget').before('<div class="more-link"><a href="/product-category/tilawah">View all</a></div>')
 
 # @codekit-append "cdnasyid-colorthief.coffee"
 # @ codekit-append "cdnasyid-niceform.coffee"

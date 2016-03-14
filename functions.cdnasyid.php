@@ -98,7 +98,7 @@ remove_action( 'woocommerce_product_meta_end', array( $WC_Brands, 'show_brand' )
 
 function cdns_single_whatsapp() {
   echo '<div class="whatsapp-note">';
-  echo '<span><i class="fa fa-whatsapp"></i>&nbsp;&nbsp;Order via WhatsApp at <strong>+6011&nbsp;2928&nbsp;4078</strong></span>';
+  echo '<span>Order via WhatsApp at <strong>+6011&nbsp;2928&nbsp;4078</strong></span>';
   echo '</div>';
 }
 add_action( 'woocommerce_single_product_summary', 'cdns_single_whatsapp', 32 );
@@ -123,7 +123,7 @@ function cdns_show_attribute_links() {
     }
   }
 }
-add_action( 'woocommerce_product_meta_end', 'cdns_show_attribute_links' );
+add_action( 'woocommerce_product_meta_start', 'cdns_show_attribute_links' );
 
 function cdns_sale_saving_badge($string, $post, $product) {
   $percent = round(100 - (100 * $product->get_sale_price() / $product->get_regular_price()));

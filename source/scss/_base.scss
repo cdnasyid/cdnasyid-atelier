@@ -123,6 +123,13 @@ h1.entry-title {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .spb_text_column {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 table thead th {
   letter-spacing: 1px;
 }
@@ -136,6 +143,17 @@ table thead th {
 
 #mobile-header {
   border-bottom: none;
+}
+
+.mobile-search-form {
+  input[type=text] {
+    border-bottom: 1px solid rgba($lightgrey, .2);
+    border-radius: 0 !important;
+  }
+  input[type=text]:focus {
+    border: 0;
+    border-bottom: 1px solid rgba($lightgrey, .2);
+  }
 }
 
 nav .menu > li.menu-item > a, nav.std-menu .menu > li > a {
@@ -192,6 +210,10 @@ nav.std-menu ul.sub-menu>li>a, nav.std-menu ul.sub-menu>li>div.current-language 
 
   small {
     line-height: 1;
+  }
+
+  @media only screen and (max-width: 991px) {
+    text-align: center;
   }
 }
 

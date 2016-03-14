@@ -245,8 +245,9 @@ nav.std-menu ul.sub-menu>li>a, nav.std-menu ul.sub-menu>li>div.current-language 
   text-transform: uppercase;
   // letter-spacing: 1px;
 
+  a,
   &.non-link span {
-    margin: 0 12px;
+    padding: 0 8px;
   }
 
   @media only screen and (max-width: 767px) {

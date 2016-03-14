@@ -189,6 +189,12 @@ nav.std-menu ul.sub-menu>li>a, nav.std-menu ul.sub-menu>li>div.current-language 
   border: 0;
 }
 
+.sf-promo-bar.promo-button p,
+.sf-promo-bar.promo-button a {
+  display: inline-block;
+  margin: 15px !important;
+}
+
 // FOOTER
 
 #footer h1,

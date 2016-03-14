@@ -217,8 +217,22 @@ nav.std-menu ul.sub-menu>li>a, nav.std-menu ul.sub-menu>li>div.current-language 
   }
 }
 
+#copyright {
+  color: #b0bec5;
+}
+
 #copyright .text-left {
-  font-size: .9rem;
+  font-size: .8rem;
+  text-transform: uppercase;
+  // vertical-align: middle;
+
+  img.afx {
+    height: 2em;
+    margin: 0 .1em;
+    opacity: .5;
+    vertical-align: middle;
+    vertical-align: -.7em;
+  }
 
   @media only screen and (max-width: 767px) {
     line-height: 1.4;
@@ -227,9 +241,13 @@ nav.std-menu ul.sub-menu>li>a, nav.std-menu ul.sub-menu>li>div.current-language 
 
 #copyright nav .menu li {
   font-family: 'Oswald', sans-serif;
-  font-size: 12px;
+  font-size: .8rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  // letter-spacing: 1px;
+
+  &.non-link span {
+    margin: 0 12px;
+  }
 
   @media only screen and (max-width: 767px) {
     line-height: 1.4;

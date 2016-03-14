@@ -83,6 +83,10 @@ jQuery ($) ->
   $('.wpcf7-form-control-wrap input').each ->
     $(this).parent().before(this)
 
+  # Menu plain text
+  $('.menu .non-link a').each ->
+    $(this).closest('li').html($(this).html())
+
   # $('a[href^="#"]').on 'click', (e) ->
   #   e.preventDefault()
   #   target = @hash

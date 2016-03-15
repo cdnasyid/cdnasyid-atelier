@@ -271,6 +271,10 @@ span.highlighted {
   display: inline-block;
   padding: .1em .25em .07em .2em;
   border-radius: 3px;
+
+  a {
+    color: #fff;
+  }
 }
 
 .image-banner-overlay {

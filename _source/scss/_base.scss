@@ -319,7 +319,15 @@ span.highlighted {
 
 .blog-grid-items .blog-item h2.tweet-text,
 .blog-grid-items .instagram-item .inst-overlay h2 {
-  line-height: 1.4 !important;
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin-bottom: 1em;
+}
+
+.blog-grid-items .blog-item .author,
+.blog-grid-items .blog-item .date {
+  font-size: .9em;
+  letter-spacing: 0;
 }
 
 // BUNCH OF HELPERS

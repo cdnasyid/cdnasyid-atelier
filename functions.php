@@ -104,6 +104,7 @@
   // add_filter('sf_wishlist_menu_icon', 'custom_wishlist_icon', 100);
 
 
+  include('functions.overrides.php');
   include('functions.cdnasyid.php');
   include('functions.assets.php');
-  include('login/functions.login.php');
+  include('functions.login.php');

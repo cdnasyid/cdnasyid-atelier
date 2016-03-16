@@ -142,6 +142,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/_source\/scss\/_home.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_source\/scss\/_home.scss",
+		"outputAbbreviatedPath": "\/_source\/css\/_home.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/_source\/scss\/_mdc.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -359,17 +375,6 @@
 		"initialSize": 0,
 		"inputAbbreviatedPath": "\/images\/flower.png",
 		"outputAbbreviatedPath": "\/images\/flower.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/magazines-desk-work-workspace.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 309584,
-		"inputAbbreviatedPath": "\/images\/magazines-desk-work-workspace.jpg",
-		"outputAbbreviatedPath": "\/images\/magazines-desk-work-workspace.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

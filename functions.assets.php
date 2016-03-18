@@ -36,6 +36,10 @@ function cdns_scripts() {
   // match height
   wp_enqueue_script('cdns-matchheight', cdns_uri() . '/js/jquery.matchHeight-min.js', array(), $asset_version, true);
 
+  // smoother parallax
+  // wp_enqueue_script('cdns-parallax', cdns_uri() . '/js/parallax.js', array(), $asset_version, true);
+
+  // main cdnaysid's js
   wp_enqueue_script('cdnasyid', cdns_uri() . '/js/cdnasyid.js', array(), $asset_version, true);
   wp_enqueue_script('cdnasyid');
 }

@@ -50,9 +50,14 @@ $red: $clr-red;
   @return mix(black, $color, $percentage);
 }
 
-a.sf-button.standard {
-  border-radius: 3px;
+a.sf-button {
+  border-radius: 2px;
   text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+a.sf-button.sf-button-rounded {
+  border-radius: 30px !important;
 }
 
 a.sf-button.large {
@@ -61,15 +66,16 @@ a.sf-button.large {
   font-size: 20px;
   line-height: 32px;
   padding: 14px 30px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 3px;
 }
 
 a.sf-button.sf-button-has-icon.large > i {
   font-size: 30px;
   line-height: 30px;
   vertical-align: -2px;
+}
+
+a.sf-button.large.bordered {
+  padding: 12px 30px;
 }
 
 a.sf-button.large.sf-icon-reveal {

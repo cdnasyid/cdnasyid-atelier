@@ -1,5 +1,16 @@
 <?php
 
+// function cdns_html_last_filter($buffer) {
+//   // modify buffer here, and then return the updated code
+//   return "<!--modified by wansaleh-->" . $buffer;
+// }
+//
+// function buffer_start() { ob_start("cdns_html_last_filter"); }
+// function buffer_end() { ob_end_flush(); }
+//
+// add_action('wp_loaded', 'buffer_start');
+// add_action('shutdown', 'buffer_end');
+
 function cdns_uri($relative_uri = "") {
   return get_stylesheet_directory_uri() . $relative_uri;
 }

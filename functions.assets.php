@@ -3,6 +3,12 @@
 // ASSETS
 $asset_version = '1.1.1';
 
+function cdns_base_stylesheets() {
+  global $asset_version;
+
+}
+
+
 function cdns_stylesheets() {
   global $asset_version;
 

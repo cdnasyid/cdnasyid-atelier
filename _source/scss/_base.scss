@@ -4,6 +4,10 @@ html {
   font-size: 16px;
 }
 
+body {
+  font-family: $body-fonts;
+}
+
 body, p {
   font-size: 1em;
   line-height: 1.5;
@@ -141,6 +145,27 @@ table thead th {
 
 // NAVIGATIONS
 
+#main-nav,
+#header nav,
+.vertical-menu nav,
+.header-9#header-section #main-nav,
+#overlay-menu nav,
+#mobile-menu,
+#one-page-nav li .hover-caption,
+.mobile-search-form input[type="text"] {
+  font-family: $menu-fonts;
+  font-size: .75rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+nav.std-menu ul.sub-menu>li>a,
+nav.std-menu ul.sub-menu>li>div.current-language {
+  font-size: .75rem;
+  padding: 0;
+  line-height: 2.5;
+}
+
 #mobile-header {
   border-bottom: none;
 }
@@ -228,9 +253,9 @@ nav.std-menu ul.sub-menu>li>a, nav.std-menu ul.sub-menu>li>div.current-language 
 }
 
 #copyright .text-left {
-  font-size: .8rem;
+  font-size: .75rem;
   text-transform: uppercase;
-  // vertical-align: middle;
+  letter-spacing: 0;
 
   img.afx {
     height: 2em;
@@ -246,10 +271,10 @@ nav.std-menu ul.sub-menu>li>a, nav.std-menu ul.sub-menu>li>div.current-language 
 }
 
 #copyright nav .menu li {
-  font-family: 'Oswald', sans-serif;
-  font-size: .8rem;
+  font-family: $menu-fonts;
+  font-size: .75rem;
   text-transform: uppercase;
-  // letter-spacing: 1px;
+  letter-spacing: 0;
 
   a,
   &.non-link span {

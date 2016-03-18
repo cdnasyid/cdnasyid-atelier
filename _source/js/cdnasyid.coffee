@@ -1,15 +1,7 @@
-jQuery.fn.cdnsParallax = jQuery.fn.parallax.noConflict()
-
 jQuery ($) ->
   # homepage mouse animation
   if !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
     $('#home-hero').append $('<div class="mouse"><div class="mouse-icon"><span class="mouse-wheel"></span></div></div>')
-
-  # $('.cdns-parallax').each ->
-  #   bgimage = $(this).css('background-image').replace(/^url\(["']|["']\)$/g, '')
-  #   $(this)
-  #     .css { 'background': 'none' }
-  #     .cdnsParallax { imageSrc: bgimage }
 
   # SELECT2
   # if page SHOP or CART

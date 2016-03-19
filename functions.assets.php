@@ -17,7 +17,7 @@ function cdns_stylesheets() {
   // echo '<style type="text/css" id="cdnasyid-styles">' . "\n";
   // echo file_get_contents(get_stylesheet_directory() . '/css/cdnasyid.css') . "\n";
   // echo "</style>" . "\n";
-  echo '<link rel="stylesheet" id="cdnasyid-styles" href="' . cdns_uri() . '/css/cdnasyid.css?ver=' . $asset_version . '" type="text/css" media="all">';
+  echo '<link rel="stylesheet" id="cdnasyid-styles" href="' . cdns_uri() . '/css/cdnasyid.min.css?ver=' . $asset_version . '" type="text/css" media="all">';
 }
 add_action('wp_head', 'cdns_stylesheets', 200);
 
@@ -52,7 +52,7 @@ function cdns_scripts() {
   // wp_enqueue_script('cdns-parallax', cdns_uri() . '/js/parallax.js', array(), $asset_version, true);
 
   // main cdnaysid's js
-  wp_enqueue_script('cdnasyid', cdns_uri() . '/js/cdnasyid.js', array(), $asset_version, true);
+  wp_enqueue_script('cdnasyid', cdns_uri() . '/js/cdnasyid.min.js', array(), $asset_version, true);
   wp_enqueue_script('cdnasyid');
 }
 add_action( 'wp_enqueue_scripts', 'cdns_scripts', 999 );

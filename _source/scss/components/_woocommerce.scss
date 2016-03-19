@@ -172,7 +172,7 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
       width: 0;
       height: 100%;
       z-index: -1;
-      background: $orange;
+      background: $accent;
       border-radius: 3px;
       transition: all .3s ease;
     }
@@ -213,7 +213,7 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
 // .woocommerce .sidebar .widget {
 //   &.cdnclr-accent {
 //     span.highlighted {
-//       background: $orange !important;
+//       background: $accent !important;
 //     }
 //   }
 //
@@ -386,7 +386,6 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
         display: block;
         margin-top: .3em;
         font-family: $condensed-fonts;
-        // font-family: $body-fonts;
         font-size: .8em;
         font-weight: 300;
         font-style: normal;
@@ -395,17 +394,24 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
         line-height: 1;
         opacity: .5;
 
+        span.product-by-by {
+          display: inline-block;
+          margin-right: .2em;
+          font-size: .9em;
+          opacity: .7;
+        }
+
         strong.product-by-artist {
           color: inherit;
-          display: inline-block !important;
+          display: inline-block;
           font-weight: 500;
           font-size: .9em;
           letter-spacing: 1px;
           text-transform: uppercase;
           border: 1px solid rgba($black, .3);
           border-radius: 2px;
-          padding: .15em .3em .12em;
-          margin-left: .1em;
+          padding: .15em .2em;
+          // margin-left: .1em;
           line-height: 1;
 
           white-space: nowrap;
@@ -976,7 +982,7 @@ span.amount .amount-decimal {
 // WOOCOMMERCE CART/CHECKOUT PAGE
 
 .modal-header {
-  background: $orange;
+  background: $accent;
   border-radius: 0;
 }
 
@@ -1152,7 +1158,7 @@ table.shop_table tr.total td {
 }
 
 .review-order-wrap #payment #place_order {
-  background: $orange;
+  background: $accent;
   border-radius: 3px;
   @include font-etica(true);
   letter-spacing: 3px !important;

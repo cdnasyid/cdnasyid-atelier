@@ -14,7 +14,10 @@ function cdns_stylesheets() {
 
   if ( is_admin() ) return;
 
-  echo '<link rel="stylesheet" href="' . cdns_uri() . '/css/cdnasyid.css?ver=' . $asset_version . '" type="text/css" media="all">';
+  // echo '<style type="text/css" id="cdnasyid-styles">' . "\n";
+  // echo file_get_contents(get_stylesheet_directory() . '/css/cdnasyid.css') . "\n";
+  // echo "</style>" . "\n";
+  echo '<link rel="stylesheet" id="cdnasyid-styles" href="' . cdns_uri() . '/css/cdnasyid.css?ver=' . $asset_version . '" type="text/css" media="all">';
 }
 add_action('wp_head', 'cdns_stylesheets', 200);
 

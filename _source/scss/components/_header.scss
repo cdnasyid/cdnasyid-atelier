@@ -1,0 +1,29 @@
+// HEADER OVERLAYS
+
+.overlay-diag {
+  .row-overlay {
+    // display: none;
+    background: rgba($clr-blue-grey-900, 0.7) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGklEQVQIW2NkQIDNjFD2ZgYGBl8QB8wACQIAK+4Ct0SKIB4AAAAASUVORK5CYII=) repeat;
+  }
+}
+
+.overlay-diagdark {
+  background-color: rgba($clr-blue-grey-900, .7);
+}
+
+.page-heading {
+  background: #CFD8DC;
+}
+
+.fancy-heading {
+  // position: relative;
+
+  .media-overlay {
+    background: rgba($clr-blue-grey-900, .7) url(../images/sf/vo_diagonal_lines_dark.png) !important;
+    opacity: .8 !important;
+  }
+}
+
+#sf-header-banner {
+  border: 0;
+}

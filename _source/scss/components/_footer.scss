@@ -1,0 +1,78 @@
+// FOOTER
+
+#footer {
+  background-image: linear-gradient(to bottom right, rgba($clr-blue-grey-900, 1), rgba($clr-deep-purple-800, .3));  padding-top: 80px;
+  overflow: hidden;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+    margin-top: 0;
+  }
+}
+
+#footer-widgets .widget {
+  padding-bottom: 80px;
+
+  p {
+    font-size: .9rem;
+    line-height: 1.4;
+  }
+
+  .info {
+    display: inline-block;
+    font-size: .9rem;
+    color: $accent;
+    border: 1px dashed rgba($accent, .5);
+    border-radius: 3px;
+    padding: .3em .5em;
+    // opacity: .5;
+  }
+
+  .long-shadow {
+    text-shadow: longshadow(#17212e);
+  }
+
+  @media only screen and (max-width: 991px) {
+    text-align: center;
+  }
+}
+
+#copyright {
+  background-color: #fff !important;
+  color: $clr-blue-grey;
+
+  .text-left {
+    color: inherit;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 0;
+
+    img.afx {
+      height: 2em;
+      margin: 0 .1em;
+      // opacity: .5;
+      vertical-align: middle;
+      vertical-align: -.7em;
+    }
+
+    @media only screen and (max-width: 767px) {
+      line-height: 1.4;
+    }
+  }
+
+  nav .menu li {
+    font-family: $menu-fonts;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 0;
+
+    a,
+    &.non-link span {
+      padding: 0 8px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      line-height: 1.4;
+    }
+  }
+}

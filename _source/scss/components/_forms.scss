@@ -138,7 +138,7 @@ span.select2-selection.select2-selection--single {
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-  background: $orange;
+  background: $accent;
 }
 
 .select2-drop.select2-drop-above.select2-drop-active,
@@ -243,7 +243,7 @@ span.select2-selection.select2-selection--single {
   @include font-etica(true);
   letter-spacing: 4px !important;
   font-size: 1.4rem !important;
-  background: $orange;
+  background: $accent;
   color: #fff;
   border: 0;
   border-radius: 3px;

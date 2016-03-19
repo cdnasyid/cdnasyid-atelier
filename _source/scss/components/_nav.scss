@@ -1,0 +1,66 @@
+// NAVIGATIONS
+
+#main-nav,
+#header nav,
+.vertical-menu nav,
+.header-9#header-section #main-nav,
+#overlay-menu nav,
+#mobile-menu,
+#one-page-nav li .hover-caption,
+.mobile-search-form input[type="text"] {
+  font-family: $menu-fonts;
+  font-size: .75rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+nav.std-menu ul.sub-menu>li>a,
+nav.std-menu ul.sub-menu>li>div.current-language {
+  font-size: .75rem;
+  padding: 0;
+  line-height: 2.5;
+}
+
+#mobile-header {
+  border-bottom: none;
+}
+
+.mobile-search-form {
+  input[type=text] {
+    border-bottom: 1px solid rgba($lightgrey, .2);
+    border-radius: 0 !important;
+  }
+  input[type=text]:focus {
+    border: 0;
+    border-bottom: 1px solid rgba($lightgrey, .2);
+  }
+}
+
+nav .menu > li.menu-item > a, nav.std-menu .menu > li > a {
+  transition: height .3s ease-in-out, line-height .3s ease-in-out, color .3s ease-in-out !important;
+}
+
+li.menu-item span.menu-item-text>i, li.menu-item span.title>i {
+  vertical-align: baseline;
+}
+
+nav.std-menu ul.sub-menu>li>a, nav.std-menu ul.sub-menu>li>div.current-language {
+  letter-spacing: 2px;
+}
+
+.shop-megamenu > .sub-menu {
+  margin-top: -1px !important;
+}
+
+.shop-megamenu .sub-menu {
+  background-color: transparent !important;
+}
+
+.shop-megamenu .container {
+  background: #fff url(/wp-content/uploads/2016/02/menu1.jpg) no-repeat right bottom;
+  background-size: contain;
+}
+
+.cart-not-empty .num-items {
+  color: $clr-orange;
+}

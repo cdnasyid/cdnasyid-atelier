@@ -1,0 +1,55 @@
+@import 'mdc';
+
+$black: $clr-grey-900;
+$white: #fff;
+$blue: $clr-blue;
+$grey: $clr-grey-600;
+$lightgrey: $clr-grey-200;
+$orange: $clr-orange;
+$turquoise: $clr-cyan;
+$green: $clr-teal-400;
+$green: $clr-green-400;
+$pink: $clr-pink;
+$gold: $clr-amber;
+$purple: $clr-deep-purple-300;
+$midnight: $clr-blue-grey-900;
+$yellow: $clr-yellow;
+$red: $clr-red;
+
+$whatsapp-green: #25D366;
+
+$accent: $orange;
+
+// $black: #212121;
+// $white: #fff;
+// $blue: #00bff3;
+// $grey: #444;
+// $lightgrey: #e4e4e4;
+// $orange: #ff7534;
+// $turquoise: #00d1c5;
+// $green: #37ba85;
+// $pink: #fe504f;
+// $gold: #ffd56c;
+// $purple: #8e7de5;
+// $midnight: #27303d;
+// $yellow: #f5c55e;
+// $red: #f45550;
+
+
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}

@@ -1,18 +1,16 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,900,900italic,400italic,400|Roboto+Condensed:700,300,400|Montserrat:400,700);
+// INCLUDES
+@import 'includes/fonts';
+@import 'includes/scut';
+@import 'includes/mixins';
+// @import 'includes/sass-space';
+@import 'includes/colors';
 
-$body-fonts: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$heading-fonts: 'lft-etica', Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$condensed-fonts: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$menu-fonts: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-@import 'fonts';
-
-@import 'scut';
-@import 'mixins';
-@import 'sass-space';
-
-@import 'color';
-@import 'base';
-@import 'home';
-@import 'woocommerce';
-@import 'forms';
+// COMPONENTS
+@import 'components/base';
+@import 'components/buttons';
+@import 'components/nav';
+@import 'components/header';
+@import 'components/home';
+@import 'components/woocommerce';
+@import 'components/forms';
+@import 'components/footer';

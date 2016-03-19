@@ -61,7 +61,7 @@ jQuery ($) ->
 
   # LONG SHADOW
   $('.long-shadow').longShadow {
-    colorShadow: '#1b122b'
+    colorShadow: '#211537'
     sizeShadow: 400
     directionShadow: 'bottom-right'
   }

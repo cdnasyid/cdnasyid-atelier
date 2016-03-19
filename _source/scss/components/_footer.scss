@@ -5,7 +5,7 @@
 }
 
 #footer {
-  background-image: linear-gradient(to bottom right, rgba($clr-blue-grey-900, 1), rgba($clr-deep-purple, .6));  padding-top: 80px;
+  background-image: linear-gradient(to bottom right, rgba(shade($clr-deep-purple-800, 70), 1), rgba($clr-deep-purple, .6));  padding-top: 80px;
   overflow: hidden;
 
   h1, h2, h3, h4, h5, h6 {

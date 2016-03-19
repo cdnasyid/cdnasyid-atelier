@@ -128,7 +128,7 @@
     .row-overlay {
       // background-color: transparent !important;
       // background-image: linear-gradient(to top right, rgba($whatsapp-green, 0), rgba($clr-deep-purple-900, 1));
-      background-image: radial-gradient(ellipse farthest-corner at left center, rgba($whatsapp-green, 0), rgba($clr-deep-purple-900, 1));
+      background-image: radial-gradient(ellipse farthest-corner at left top, rgba($whatsapp-green, 0) 30%, rgba($clr-deep-purple-900, 1));
     }
 
     h3 {

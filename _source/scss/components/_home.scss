@@ -222,7 +222,8 @@
 #home-promobar {
   .sf-promo-bar {
     background-color: $clr-deep-purple-800;
-    background-image: linear-gradient(to bottom right, rgba($pink, .2), rgba(invert($pink), .4));
+    background-color: $clr-deep-purple;
+    background-image: linear-gradient(to bottom right, rgba($clr-orange, .5), rgba($purple, .4));
 
     > p {
       color: #fff;

@@ -1,7 +1,11 @@
 // WOOCOMMERCE SECTION
 
-.bag-empty, .wishlist-empty {
+.bag-empty,
+.wishlist-empty {
+  font-size: .75rem;
   font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 .bag-contents {

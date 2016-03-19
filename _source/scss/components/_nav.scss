@@ -56,10 +56,10 @@ nav.std-menu ul.menu > li {
       position: absolute;
       content: '';
       width: 0;
-      height: 2px;
-      bottom: -5px;
+      height: 1px;
+      bottom: -3px;
       left: 0;
-      background: #fff;
+      background: $accent;
       transition: all .3s ease;
     }
   }
@@ -70,12 +70,20 @@ nav.std-menu ul.menu > li {
   }
 }
 
-.shop-megamenu > .sub-menu {
-  margin-top: -1px !important;
+nav.std-menu li.account-item > ul.sub-menu {
+  padding: 10px 20px;
 }
 
-.shop-megamenu .sub-menu {
+.sf-mega-menu .sub-menu {
   background-color: transparent !important;
+}
+
+.sf-mega-menu > .sub-menu {
+  margin-top: -1px !important;
+
+  > div > li.menu-item {
+    padding: 30px 0 !important;
+  }
 }
 
 .shop-megamenu .container {
@@ -86,8 +94,30 @@ nav.std-menu ul.menu > li {
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
+  box-shadow: 1px 1px 5px rgba(#000, .07);
 }
 
 .cart-not-empty .num-items {
   color: $clr-orange;
 }
+//
+// .account-item,
+// .shopping-bag-item {
+//   > a:after {
+//     content: "\e60d";
+//     font-family: 'atelier';
+//     position: absolute;
+//     bottom: 5%;
+//     left: 50%;
+//     height: 15px;
+//     line-height: 15px;
+//     font-size: 12px;
+//     // opacity: 0;
+//     transition: all .3s ease;
+//   }
+//   //
+//   // &:hover > a:after {
+//   //   bottom: 5%;
+//   //   opacity: 1;
+//   // }
+// }

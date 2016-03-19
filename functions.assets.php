@@ -45,6 +45,9 @@ function cdns_scripts() {
   // match height
   wp_enqueue_script('cdns-matchheight', cdns_uri() . '/js/jquery.matchHeight-min.js', array(), $asset_version, true);
 
+  // long shadow
+  wp_enqueue_script('cdns-longshadow', cdns_uri() . '/js/jquery.longShadow.min.js', array(), $asset_version, true);
+
   // smoother parallax
   // wp_enqueue_script('cdns-parallax', cdns_uri() . '/js/parallax.js', array(), $asset_version, true);
 

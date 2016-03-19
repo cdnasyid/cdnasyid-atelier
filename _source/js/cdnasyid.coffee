@@ -52,12 +52,19 @@ jQuery ($) ->
   $('.wpcf7-form-control-wrap input').each ->
     $(this).parent().before(this)
 
-  # Menu plain text
+  # MENU PLAIN TEXT
   $('.menu .non-link a').each ->
     $(this).closest('li').html($(this).html())
 
   # TILAWAH MORE LINK
   $('#home-tilawah .woocommerce.product_list_widget').before('<div class="more-link"><a href="/product-category/tilawah">View all</a></div>')
+
+  # LONG SHADOW
+  $('.long-shadow').longShadow {
+    colorShadow: '#1b122b'
+    sizeShadow: 400
+    directionShadow: 'bottom-right'
+  }
 
 # @codekit-append "cdnasyid-overrides.coffee"
 # @codekit-append "cdnasyid-colorthief.coffee"

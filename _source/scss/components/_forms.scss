@@ -81,6 +81,7 @@ input[type="number"]:focus {
   line-height: 44px;
 }
 
+form label,
 #commentform label,
 .woocommerce form #customer_details .form-row label,
 .control-label {
@@ -88,6 +89,7 @@ input[type="number"]:focus {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: .75em;
+  opacity: .5;
 }
 
 // .woocommerce .quantity .plus,

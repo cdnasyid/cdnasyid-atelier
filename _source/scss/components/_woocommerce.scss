@@ -309,10 +309,13 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
 
   figure {
     .cart-overlay {
+      bottom: 10px;
+      left: 10px;
+
       .shop-actions {
         min-height: 40px;
-        transform: translateY(150%);
-        transition: transform .3s ease;
+        // transform: translateY(150%);
+        // transition: transform .3s ease;
 
         > * {
           opacity: 1 !important;
@@ -363,11 +366,11 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
       }
     }
 
-    &:hover {
-      .cart-overlay .shop-actions {
-        transform: translateY(0);
-      }
-    }
+    // &:hover {
+    //   .cart-overlay .shop-actions {
+    //     transform: translateY(0);
+    //   }
+    // }
   }
 
   .product-details {

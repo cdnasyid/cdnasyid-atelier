@@ -27,3 +27,11 @@
 #sf-header-banner {
   border: 0;
 }
+
+#mobile-top-text, #mobile-header {
+  background: $header !important;
+}
+
+.header-wrap #header-section .is-sticky #header.sticky-header {
+  background: rgba($header, .95) !important;
+}

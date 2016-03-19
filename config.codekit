@@ -607,6 +607,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/shopmenu2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 54003,
+		"inputAbbreviatedPath": "\/images\/shopmenu2.jpg",
+		"outputAbbreviatedPath": "\/images\/shopmenu2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/tilawah.png": {
 		"fileType": 32768,
 		"ignore": 0,

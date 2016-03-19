@@ -1,5 +1,8 @@
 // BASICS
 
+::-moz-selection { background: $accent; }
+::selection { background: $accent; }
+
 html {
   font-size: 16px;
 }
@@ -19,10 +22,6 @@ small {
 
 .fa.fa-heart {
   color: $clr-red;
-}
-
-.header-wrap #header-section .is-sticky #header.sticky-header {
-  background: rgba($midnight, .95);
 }
 
 // TYPOGRAPHY: HEADINGS
@@ -107,9 +106,49 @@ table thead th {
   letter-spacing: 1px;
 }
 
+// .tooltip-inner {
+//   padding: 3px 8px 4px;
+//   border-radius: 2px;
+//   font-size: .85em;
+//   letter-spacing: -1px;
+// }
+//
+// .tooltip.top {
+//   margin-top: -5px;
+// }
+// .tooltip.top .tooltip-arrow {
+//   border-top-color: #222;
+//   margin-left: -5px;
+//   bottom: -5px;
+//   border-width: 5px 5px 0;
+// }
+
+.tooltip.top {
+  padding: 5px 0;
+  margin-top: -3px;
+}
 .tooltip-inner {
-  padding: 8px 13px;
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
   border-radius: 2px;
+  font-size: .85em;
+}
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
 }
 
 // MISC

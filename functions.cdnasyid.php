@@ -182,13 +182,13 @@ function cdns_social_share($atts = null) {
 add_shortcode('sf_social_share', 'cdns_social_share');
 
 
-function add_fb_sdk() {
-  if ( is_admin() ) return;
-
-  echo '<div id="fb-root"></div><script>!function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||(o=e.createElement(n),o.id=t,o.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1109004049131487",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script>';
-}
-add_action('sf_before_page_container', 'add_fb_sdk');
-
+// function add_fb_sdk() {
+//   if ( is_admin() ) return;
+//
+//   echo '<div id="fb-root"></div><script>!function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||(o=e.createElement(n),o.id=t,o.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1109004049131487",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script>';
+// }
+// add_action('sf_before_page_container', 'add_fb_sdk');
+//
 
 
 // function cdns_before_page_container() {

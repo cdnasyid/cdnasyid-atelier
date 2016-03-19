@@ -585,6 +585,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/shopmenu.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 48860,
+		"inputAbbreviatedPath": "\/images\/shopmenu.jpg",
+		"outputAbbreviatedPath": "\/images\/shopmenu.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/shopmenu1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 43989,
+		"inputAbbreviatedPath": "\/images\/shopmenu1.jpg",
+		"outputAbbreviatedPath": "\/images\/shopmenu1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/tilawah.png": {
 		"fileType": 32768,
 		"ignore": 0,

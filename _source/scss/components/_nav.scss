@@ -44,8 +44,30 @@ li.menu-item span.menu-item-text>i, li.menu-item span.title>i {
   vertical-align: baseline;
 }
 
-nav.std-menu ul.sub-menu>li>a, nav.std-menu ul.sub-menu>li>div.current-language {
+nav.std-menu ul.sub-menu>li>a,
+nav.std-menu ul.sub-menu>li>div.current-language {
   letter-spacing: 2px;
+}
+
+nav.std-menu ul.menu > li {
+  > a > span.menu-item-text {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #fff;
+      transition: all .3s ease;
+    }
+  }
+  &:hover {
+    > a > span.menu-item-text:after {
+      width: 20px;
+    }
+  }
 }
 
 .shop-megamenu > .sub-menu {
@@ -57,7 +79,12 @@ nav.std-menu ul.sub-menu>li>a, nav.std-menu ul.sub-menu>li>div.current-language 
 }
 
 .shop-megamenu .container {
-  background: #fff url(/wp-content/uploads/2016/02/menu1.jpg) no-repeat right bottom;
+  background-color: #fff;
+  background-image:
+    // linear-gradient(to right, #fff 60%, transparent),
+    url(../images/shopmenu1.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
   background-size: contain;
 }
 

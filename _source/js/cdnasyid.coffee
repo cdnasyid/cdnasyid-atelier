@@ -72,5 +72,5 @@ jQuery ($) ->
   # }
 
 # @codekit-append "cdnasyid-overrides.coffee"
-# @xxxcodekit-append "cdnasyid-colorthief.coffee"
+# @codekit-append "cdnasyid-colorthief.coffee"
 # @xxxcodekit-append "cdnasyid-niceform.coffee"

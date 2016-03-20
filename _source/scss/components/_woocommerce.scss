@@ -694,8 +694,9 @@ span.amount .amount-decimal {
       h3 {
         text-transform: uppercase;
         letter-spacing: 2px;
+        font-family: $condensed-fonts;
         font-size: 1rem;
-        font-weight: 600;
+        // font-weight: 600;
         margin: 0 0 .5em;
         color: inherit;
 
@@ -826,13 +827,13 @@ span.amount .amount-decimal {
     > span {
       text-transform: uppercase;
       letter-spacing: 2px;
-      font-weight: 600;
+      // font-weight: 600;
       line-height: 1;
 
       > span {
         text-transform: none;
         letter-spacing: 0;
-        font-weight: 400;
+        // font-weight: 400;
       }
 
       &:before {

@@ -39,6 +39,7 @@ jQuery ($) ->
     lightColor
 
   getPalette = (img, num) ->
+    img.crossOrigin = "anonymous"
     colorThief = new ColorThief()
     colors = colorThief.getPalette(img, num)
     if colors != null

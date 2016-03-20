@@ -73,6 +73,11 @@ nav.std-menu ul.menu > li {
 nav.std-menu li.account-item > ul.sub-menu {
   padding: 10px 20px;
 }
+.wishlist-item:hover > a:after,
+.shopping-bag-item:hover > a:after,
+.account-item:hover > a:after {
+  bottom: 0 !important;
+}
 
 .sf-mega-menu .sub-menu {
   background-color: transparent !important;

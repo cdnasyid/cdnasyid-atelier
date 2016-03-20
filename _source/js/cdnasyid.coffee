@@ -60,11 +60,16 @@ jQuery ($) ->
   $('#home-tilawah .woocommerce.product_list_widget').before('<div class="more-link"><a href="/product-category/tilawah">View all</a></div>')
 
   # LONG SHADOW
-  $('.long-shadow').longShadow {
+  $('.footer-social-1, .footer-social-2').longShadow {
     colorShadow: '#211537'
     sizeShadow: 400
     directionShadow: 'bottom-right'
   }
+  # $('.footer-social-2').longShadow {
+  #   colorShadow: '#703313'
+  #   sizeShadow: 400
+  #   directionShadow: 'bottom-right'
+  # }
 
 # @codekit-append "cdnasyid-overrides.coffee"
 # @codekit-append "cdnasyid-colorthief.coffee"

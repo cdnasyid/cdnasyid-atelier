@@ -22,6 +22,10 @@
     line-height: 1.4;
   }
 
+  .social-icons a {
+    color: #fff;
+  }
+
   .info {
     // display: inline-block;
     font-size: .9rem;
@@ -31,6 +35,10 @@
     // border-radius: 3px;
     // padding: .3em .5em;
     // opacity: .5;
+  }
+
+  .footer-social-2 {
+    color: $accent;
   }
 
   @media only screen and (max-width: 767px) {

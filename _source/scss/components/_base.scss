@@ -106,6 +106,22 @@ table thead th {
   letter-spacing: 1px;
 }
 
+#sf-header-banner {
+  font-family: $condensed-fonts;
+  font-size: .85rem;
+  // text-transform: uppercase;
+  letter-spacing: 1px;
+  // text-shadow: 0 -1px 0 rgba(#000, .15);
+  color: rgba(#000, .6);
+  background-image: linear-gradient(to right, rgba($clr-light-blue, 1), rgba($clr-orange, .3));
+}
+
+#back-to-top {
+  border-radius: 200px;
+  // background: none;
+  background-color: rgba(shade($clr-deep-purple, 60), .3);
+}
+
 // .tooltip-inner {
 //   padding: 3px 8px 4px;
 //   border-radius: 2px;

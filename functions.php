@@ -108,3 +108,4 @@
   include('functions.cdnasyid.php');
   include('functions.assets.php');
   include('functions.login.php');
+  include('functions.minify.php');

@@ -1,25 +1,24 @@
 <?php
 
 // ASSETS
-$asset_version = '1.1.1';
+$asset_version = '1.1.2';
 
-function cdns_base_stylesheets() {
-  global $asset_version;
-
+function cdns_google_fonts() {
+  $query_args = array(
+    'family' => 'Lato:300,300italic,900,900italic,400italic,400,700,700italic|Oswald:300,400,700|Montserrat:400,700'
+  );
+  wp_enqueue_style( 'cdns-googlefonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
 }
+add_action('wp_enqueue_scripts', 'cdns_google_fonts', 9999);
 
-
-function cdns_stylesheets() {
+function cdns_main_style() {
   global $asset_version;
 
   if ( is_admin() ) return;
 
-  // echo '<style type="text/css" id="cdnasyid-styles">' . "\n";
-  // echo file_get_contents(get_stylesheet_directory() . '/css/cdnasyid.css') . "\n";
-  // echo "</style>" . "\n";
   echo '<link rel="stylesheet" id="cdnasyid-styles" href="' . cdns_uri() . '/css/cdnasyid.min.css?ver=' . $asset_version . '" type="text/css" media="all">';
 }
-add_action('wp_head', 'cdns_stylesheets', 200);
+add_action('wp_footer', 'cdns_main_style');
 
 
 function cdns_scripts() {
@@ -55,7 +54,7 @@ function cdns_scripts() {
   wp_enqueue_script('cdnasyid', cdns_uri() . '/js/cdnasyid.min.js', array(), $asset_version, true);
   wp_enqueue_script('cdnasyid');
 }
-add_action( 'wp_enqueue_scripts', 'cdns_scripts', 999 );
+add_action('wp_enqueue_scripts', 'cdns_scripts', 9999);
 
 
 function cdns_admin_scripts() {
@@ -63,4 +62,4 @@ function cdns_admin_scripts() {
 
   wp_enqueue_script('cdns-admin', cdns_uri() . '/js/cdnasyid-admin.js', array(), $asset_version, true);
 }
-add_action( 'admin_enqueue_scripts', 'cdns_admin_scripts', 999 );
+add_action('admin_enqueue_scripts', 'cdns_admin_scripts', 9999);

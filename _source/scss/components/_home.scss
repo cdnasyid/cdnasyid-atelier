@@ -241,25 +241,43 @@
   @media only screen and (max-width: 767px) {
     .blog-grid-items .blog-item.col-sm-sf-5 {
       width: 50%;
+
+      &:last-child {
+        display: none;
+      }
     }
   }
 }
 
 #home-promobar {
   .sf-promo-bar {
-    background-color: $clr-deep-purple-800;
-    background-color: $clr-deep-purple;
-    background-image: linear-gradient(to bottom right, rgba($clr-orange, .5), rgba($purple, .4));
+    background-color: shade($clr-deep-purple-800, 30);
+    background-image: linear-gradient(to bottom right, rgba($clr-orange, .5), rgba($purple, 0));
 
     > p {
       color: #fff;
     }
 
-    a.sf-button {
+    > a.sf-button {
       border-radius: 0;
       border-width: 3px;
       font-weight: 900;
       letter-spacing: 5px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      background-color: #fff;
+      background-image: linear-gradient(to bottom right, rgba($clr-deep-purple-800, .1), rgba(#fff, 0));
+      $color: $clr-deep-purple-900;
+      color: $color;
+      > p {
+        color: $color;
+      }
+      > a.sf-button.bordered.white {
+        background: none;
+        color: $color !important;
+        border-color: $color !important;
+      }
     }
   }
 }

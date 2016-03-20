@@ -825,7 +825,7 @@ span.amount .amount-decimal {
       text-transform: uppercase;
       letter-spacing: 2px;
       font-weight: 600;
-      line-height: 1rem;
+      line-height: 1;
 
       > span {
         text-transform: none;
@@ -848,7 +848,7 @@ span.amount .amount-decimal {
       margin-top: 1.5rem;
 
       .sku {
-        opacity: .6  ;
+        opacity: .6;
       }
     }
 

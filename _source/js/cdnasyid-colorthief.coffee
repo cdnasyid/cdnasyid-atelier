@@ -100,8 +100,7 @@ jQuery ($) ->
 
           CDNS.log "product grid #{img.src} colors fetched."
 
-          $(img).replaceWith(new_img)
-          CDNS.log "product grid #{img.src} replaced."
+          new_img = null
 
       new_img.crossOrigin = "Anonymous"
       new_img.src = img.src
@@ -146,8 +145,7 @@ jQuery ($) ->
 
           CDNS.log "product single #{img.src} colors fetched."
 
-          $(img).replaceWith(new_img)
-          CDNS.log "product single #{img.src} replaced."
+          new_img = null
 
       new_img.crossOrigin = "Anonymous"
       new_img.src = img.src

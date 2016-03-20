@@ -1,0 +1,1 @@
+(function(){var n,o;n=$("img")[0],o=new Image,o.onload=function(){var n,e;return n=new ColorThief,e=n.getPalette(o,4),console.log(e)},o.crossOrigin="Anonymous",o.src=n.src,$(n).replaceWith(o)}).call(this);

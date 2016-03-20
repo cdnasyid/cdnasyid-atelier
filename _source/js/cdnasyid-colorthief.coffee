@@ -1,3 +1,5 @@
+dev = false
+
 jQuery ($) ->
   tinycolor::isHalfDark = ->
     this.getBrightness() < 192
@@ -74,13 +76,14 @@ jQuery ($) ->
       img = $this.find('.first-image img')[0]
       if ( !img? ) then return
 
-      $(img).imagesLoaded ->
+      new_img = new Image
 
+      new_img.onload = ->
         details = $this.find('.product-details')
         link_title = $this.find('.product-details h3 a')
         artist = $this.find('.product-details h3 a small strong')
 
-        if ( palette = getPalette(img, 4) )
+        if ( palette = getPalette(new_img, 4) )
           colorfulBar = '<div class="colorful-bar clearfix">'
           palette.forEach (color) ->
             colorfulBar += '<div class="col-xs-3" style="background: ' + tinycolor(color).toRgbString() + '"></div>'
@@ -95,6 +98,15 @@ jQuery ($) ->
           details.css { 'color': color.toRgbString() }
           artist.css { 'border-color': color.setAlpha(.5).toRgbString() }
 
+          CDNS.log "product grid #{img.src} colors fetched."
+
+          $(img).replaceWith(new_img)
+          CDNS.log "product grid #{img.src} replaced."
+
+      new_img.crossOrigin = "Anonymous"
+      new_img.src = img.src
+
+
   productSingle = ->
     $('.woocommerce.single-product').each ->
 
@@ -103,7 +115,9 @@ jQuery ($) ->
 
       if ( !img? ) then return
 
-      $(img).imagesLoaded ->
+      new_img = new Image
+
+      new_img.onload = ->
 
         product_main = $('.product-fw-split .product-main')
         summary = $this.find('.summary')
@@ -111,7 +125,7 @@ jQuery ($) ->
         product_by = product_title.find('small strong')
         breadcrumb = $this.find('.woocommerce-breadcrumb')
 
-        if ( palette = getPalette(img, 4) )
+        if ( palette = getPalette(new_img, 4) )
           colorfulBar = '<div class="colorful-bar clearfix">'
           palette.forEach (color) ->
             colorfulBar += '<div class="col-xs-3" style="background: ' + tinycolor(color).toRgbString() + '"></div>'
@@ -129,6 +143,14 @@ jQuery ($) ->
           summary.find('.nav-previous, .nav-next').css { 'border-color': color.lighten(40).toRgbString() }
 
           summary.addClass 'colored'
+
+          CDNS.log "product single #{img.src} colors fetched."
+
+          $(img).replaceWith(new_img)
+          CDNS.log "product single #{img.src} replaced."
+
+      new_img.crossOrigin = "Anonymous"
+      new_img.src = img.src
 
   productGrid()
   productSingle()

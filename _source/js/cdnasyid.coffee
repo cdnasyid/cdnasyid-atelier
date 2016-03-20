@@ -1,3 +1,10 @@
+CDNS = {
+  dev: false
+  log: ->
+    if CDNS.dev
+      console.log.apply(console, arguments)
+}
+
 jQuery ($) ->
   # homepage mouse animation
   if !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)

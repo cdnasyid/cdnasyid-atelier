@@ -39,7 +39,10 @@ jQuery ($) ->
     lightColor
 
   getPalette = (img, num) ->
-    img.crossOrigin = "anonymous"
+    # image = new Image(img.width, img.height)
+    # image.src = img.src
+    # img.crossOrigin = "Anonymous"
+
     colorThief = new ColorThief()
     colors = colorThief.getPalette(img, num)
     if colors != null
@@ -98,7 +101,7 @@ jQuery ($) ->
     $('.woocommerce.single-product').each ->
 
       $this = $(this).addClass('product-fw-split')
-      img = $this.find('#product-img-slider img:first')[0]
+      img = $this.find('#product-img-slider img')[0]
 
       if ( !img? ) then return
 

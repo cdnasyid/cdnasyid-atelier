@@ -127,10 +127,6 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
     }
   }
 
-  .select2-container {
-    width: 100% !important;
-  }
-
   &.widget_brand_thumbnails .brand-thumbnails {
     li {
       height: 100px;
@@ -146,6 +142,13 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
         max-height: 100px;
       }
     }
+  }
+}
+
+.woocommerce .sidebar,
+.sf-mobile-shop-filters {
+  .widget .select2-container {
+    width: 100% !important;
   }
 }
 

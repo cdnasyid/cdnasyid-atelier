@@ -57,11 +57,11 @@
     letter-spacing: 0;
 
     img.afx {
-      height: 2em;
+      height: 30px;
       margin: 0 .1em;
       opacity: .6;
-      vertical-align: middle;
-      vertical-align: -.7em;
+      // vertical-align: middle;
+      vertical-align: -10px;
     }
 
     @media only screen and (max-width: 991px) {

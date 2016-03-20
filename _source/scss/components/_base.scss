@@ -85,7 +85,32 @@ h1.entry-title {
     width: 40px;
     bottom: 0;
     left: 0;
-    background: $clr-orange;
+    background: $accent;
+  }
+}
+
+h4.spb-heading,
+h3.spb-heading,
+h4.lined-heading,
+.gform_heading h3 {
+  overflow: visible;
+}
+
+.title-wrap h3.spb-heading span,
+h3#reply-title span {
+  letter-spacing: -1px;
+  font-family: $menu-fonts;
+  font-weight: 700;
+  border: 0;
+
+  &:after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 40px;
+    bottom: 0;
+    left: 0;
+    background: $accent;
   }
 }
 
@@ -112,8 +137,8 @@ table thead th {
   // text-transform: uppercase;
   letter-spacing: 1px;
   // text-shadow: 0 -1px 0 rgba(#000, .15);
-  color: rgba(#000, .6);
-  background-image: linear-gradient(to right, rgba($clr-light-blue, 1), rgba($clr-orange, .3));
+  color: rgba(#000, .7);
+  background-image: linear-gradient(to right, $clr-light-blue-300, $clr-deep-purple-200);
 }
 
 #back-to-top {
@@ -165,6 +190,21 @@ table thead th {
   margin-left: -5px;
   border-width: 5px 5px 0;
   border-top-color: #000;
+}
+
+// OVERLAY
+
+#overlay-menu,
+#fullscreen-search,
+#fullscreen-supersearch {
+  background-image: radial-gradient(ellipse farthest-corner at center, $clr-blue-grey-900, rgba(shade($clr-blue-900, 80), 1));
+}
+
+.fs-search-open .header-wrap #header,
+.fs-search-open .header-standard-overlay #header,
+.fs-search-open .vertical-header .header-wrap #header-section,
+.fs-search-open #header-section .is-sticky #header.sticky-header {
+  background-color: transparent !important;
 }
 
 // MISC

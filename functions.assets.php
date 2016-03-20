@@ -1,7 +1,7 @@
 <?php
 
 // ASSETS
-$asset_version = '1.1.2';
+$asset_version = '1.1.3';
 
 function cdns_google_fonts() {
   $query_args = array(

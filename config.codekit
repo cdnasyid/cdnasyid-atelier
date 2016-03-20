@@ -39,7 +39,7 @@
 	"\/_source\/js\/cdnasyid-colorthief.coffee": {
 		"createSourceMap": 0,
 		"fileType": 32,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_source\/js\/cdnasyid-colorthief.coffee",
 		"minifyOutput": 1,

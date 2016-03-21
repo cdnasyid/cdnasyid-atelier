@@ -1,5 +1,12 @@
 <?php
 
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+
 // function cdns_html_last_filter($buffer) {
 //   // modify buffer here, and then return the updated code
 //   return "<!--modified by wansaleh-->" . $buffer;
@@ -189,12 +196,5 @@ add_shortcode('sf_social_share', 'cdns_social_share');
 // }
 // add_action('sf_before_page_container', 'add_fb_sdk');
 //
-
-
-// function cdns_before_page_container() {
-//   echo '<div id="as-root"></div><script>(function(e,t,n){var r,i=e.getElementsByTagName(t)[0];if(e.getElementById(n))return;r=e.createElement(t);r.id=n;r.src="//button.aftership.com/all.js";i.parentNode.insertBefore(r,i)})(document,"script","aftership-jssdk")</script>';
-// }
-// add_action('sf_before_page_container', 'cdns_before_page_container');
-
 
 add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );

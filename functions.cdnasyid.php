@@ -34,7 +34,7 @@ function cdns_the_title($title, $id = null, $qvplugin = false) {
     if (preg_match('/—|&#8211;|–/', $title)) {
     // if (strpos($title, '&#8211;') !== false) {
       list($artist, $product) = preg_split('/\s+(—|&#8211;|–)\s+/', $title);
-      return '<span class="product-title">' . $product . '</span> <small class="product-by"><span class="product-by-by">by </span><strong class="product-by-artist">' . $artist . '</strong></small>';
+      return '<span class="product-title">' . $product . '</span> <small class="product-by"><span class="product-by-by">by</span> <strong class="product-by-artist">' . $artist . '</strong></small>';
     }
   }
 

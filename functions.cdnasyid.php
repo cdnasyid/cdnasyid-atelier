@@ -7,16 +7,16 @@ remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 
-// function cdns_html_last_filter($buffer) {
-//   // modify buffer here, and then return the updated code
-//   return "<!--modified by wansaleh-->" . $buffer;
-// }
-//
-// function buffer_start() { ob_start("cdns_html_last_filter"); }
-// function buffer_end() { ob_end_flush(); }
-//
-// add_action('wp_loaded', 'buffer_start');
-// add_action('shutdown', 'buffer_end');
+function cdns_html_last_filter($buffer) {
+  // modify buffer here, and then return the updated code
+  return str_replace('<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">', '<meta http-equiv="X-UA-Compatible" content="IE=edge">, '$buffer);
+}
+
+function buffer_start() { ob_start("cdns_html_last_filter"); }
+function buffer_end() { ob_end_flush(); }
+
+add_action('wp_loaded', 'buffer_start');
+add_action('shutdown', 'buffer_end');
 
 function cdns_uri($relative_uri = "") {
   return get_stylesheet_directory_uri() . $relative_uri;

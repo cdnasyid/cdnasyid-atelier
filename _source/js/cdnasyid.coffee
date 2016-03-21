@@ -13,6 +13,26 @@ class CDNS
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 
 
+class CDNS.GA
+  constructor: ->
+    ((i, s, o, g, r, a, m) ->
+      i['GoogleAnalyticsObject'] = r
+      i[r] = i[r] or ->
+        (i[r].q = i[r].q or []).push arguments
+        return
+
+      i[r].l = 1 * new Date
+      a = s.createElement(o)
+      m = s.getElementsByTagName(o)[0]
+      a.async = 1
+      a.src = g
+      m.parentNode.insertBefore a, m
+      return
+    ) window, document, 'script', '//www.cdnasyid.com/analytics.js', 'ga'
+    ga 'create', 'UA-73609258-1', 'auto'
+    ga 'send', 'pageview'
+
+
 class CDNS.Search
   constructor: ->
     $(document).on 'keypress.cdns.search', (e) =>

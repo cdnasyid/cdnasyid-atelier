@@ -187,8 +187,8 @@
     @extend .bg-dark;
 
     position: relative;
-    background-color: #2c262d !important;
-    background-image: linear-gradient(to bottom right, rgba($red, .2), rgba(invert($red), .2));
+    background-color: shade($clr-deep-purple-900, 90) !important;
+    background-image: linear-gradient(to bottom right, rgba($clr-red-400, .2), rgba(darken($clr-light-blue-500, 30), .8));
 
     &:before {
       position: absolute;

@@ -406,7 +406,7 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
 
         span.product-by-by {
           display: inline-block;
-          margin-right: .2em;
+          // margin-right: .2em;
           font-size: .9em;
           opacity: .7;
         }
@@ -891,10 +891,29 @@ span.amount .amount-decimal {
   }
 }
 
-.woocommerce .product .woocommerce-tabs .wc-tabs li a {
-  @include font-etica(true);
-  font-size: 1.1rem !important;
+.woocommerce div.product .woocommerce-tabs ul.tabs.wc-tabs li {
+
+  a {
+    // position: relative;
+    // @include font-etica(true);
+    font-family: $menu-fonts;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    overflow: visible;
+  }
+
+  // &:after {
+  //   position: absolute;
+  //   content: '';
+  //   width: 30px;
+  //   height: 2px;
+  //   left: -34px;
+  //   top: 0;
+  // }
 }
+
 
 .product-fw-split .product-main {
   padding: 60px 60px 20px;

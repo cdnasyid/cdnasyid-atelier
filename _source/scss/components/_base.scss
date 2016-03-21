@@ -24,6 +24,11 @@ small {
   color: $clr-red;
 }
 
+.spb-row-full-width .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 // TYPOGRAPHY: HEADINGS
 
 h1 {

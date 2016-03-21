@@ -9,7 +9,7 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 function cdns_html_last_filter($buffer) {
   // modify buffer here, and then return the updated code
-  return str_replace('<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">', '<meta http-equiv="X-UA-Compatible" content="IE=edge">, '$buffer);
+  return str_replace('<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">', '<meta http-equiv="X-UA-Compatible" content="IE=edge">', $buffer);
 }
 
 function buffer_start() { ob_start("cdns_html_last_filter"); }

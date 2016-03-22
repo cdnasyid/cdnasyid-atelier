@@ -5,7 +5,7 @@ function cdns_ao_override_css_replacetag($replacetag) {
 }
 add_filter('autoptimize_filter_css_replacetag', 'cdns_ao_override_css_replacetag', 10, 1);
 
-// strand ending a tags
+// stray ending a tags
 remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
 
 // remove emoji scripts

@@ -1,5 +1,24 @@
 <?php
 
+// //Making jQuery to load from Google Library
+// function cdns_replace_jquery() {
+//   $jquery_version = '1.12.2';
+//   $jquery_migrate_version = '1.4.0';
+//
+//   if (!is_admin()) {
+//     // comment out the next two lines to load the local copy of jQuery
+//     wp_deregister_script('jquery');
+//     wp_register_script('jquery', "//code.jquery.com/jquery-$jquery_version.min.js", false, $jquery_version);
+//     wp_enqueue_script('jquery');
+//
+//     wp_deregister_script('jquery-migrate');
+//     wp_register_script('jquery-migrate', "//code.jquery.com/jquery-migrate-$jquery_migrate_version.min.js", false, $jquery_migrate_version);
+//     wp_enqueue_script('jquery-migrate');
+//   }
+// }
+// add_action('init', 'cdns_replace_jquery');
+
+
 // ASSETS
 $asset_version = '1.1.3';
 

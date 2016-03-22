@@ -1,33 +1,40 @@
 <?php
 
+function cdns_ao_override_css_replacetag($replacetag) {
+  return array("</head>", "before");
+}
+add_filter('autoptimize_filter_css_replacetag', 'cdns_ao_override_css_replacetag', 10, 1);
+
+// strand ending a tags
+remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
+
+// remove emoji scripts
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
-
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
-
-function cdns_html_last_filter($buffer) {
-  // modify buffer here, and then return the updated code
-  return str_replace('<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">', '<meta http-equiv="X-UA-Compatible" content="IE=edge">', $buffer);
-}
-
-function buffer_start() { ob_start("cdns_html_last_filter"); }
-function buffer_end() { ob_end_flush(); }
-
-add_action('wp_loaded', 'buffer_start');
-add_action('shutdown', 'buffer_end');
-
-function cdns_uri($relative_uri = "") {
-  return get_stylesheet_directory_uri() . $relative_uri;
-}
-
-function cdns_widget_title($title) {
-  if ( is_admin() ) return $title;
-
-  return do_shortcode(htmlspecialchars_decode($title));
-}
-add_filter('widget_title',  'cdns_widget_title');
+// function cdns_html_last_filter($buffer) {
+//   // modify buffer here, and then return the updated code
+//   return str_replace('<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">', '<meta http-equiv="X-UA-Compatible" content="IE=edge">', $buffer);
+// }
+//
+// function buffer_start() { ob_start("cdns_html_last_filter"); }
+// function buffer_end() { ob_end_flush(); }
+//
+// add_action('wp_loaded', 'buffer_start');
+// add_action('shutdown', 'buffer_end');
+//
+// function cdns_uri($relative_uri = "") {
+//   return get_stylesheet_directory_uri() . $relative_uri;
+// }
+//
+// function cdns_widget_title($title) {
+//   if ( is_admin() ) return $title;
+//
+//   return do_shortcode(htmlspecialchars_decode($title));
+// }
+// add_filter('widget_title',  'cdns_widget_title');
 
 
 function cdns_the_title($title, $id = null, $qvplugin = false) {

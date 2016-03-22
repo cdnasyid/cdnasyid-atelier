@@ -16,9 +16,10 @@ function cdns_main_style() {
 
   if ( is_admin() ) return;
 
-  echo '<link rel="stylesheet" id="cdnasyid-styles" href="' . cdns_uri() . '/css/cdnasyid.min.css?ver=' . $asset_version . '" type="text/css" media="all">';
+  echo '<link rel="stylesheet" property="stylesheet" id="cdnasyid-styles" href="' . cdns_uri() . '/css/cdnasyid.min.css?ver=' . $asset_version . '" type="text/css" media="all">';
 }
-add_action('wp_footer', 'cdns_main_style');
+// add_action('wp_footer', 'cdns_main_style');
+add_action('sf_before_page_container', 'cdns_main_style');
 
 
 function cdns_scripts() {

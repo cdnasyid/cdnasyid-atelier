@@ -24,17 +24,24 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 //
 // add_action('wp_loaded', 'buffer_start');
 // add_action('shutdown', 'buffer_end');
-//
-// function cdns_uri($relative_uri = "") {
-//   return get_stylesheet_directory_uri() . $relative_uri;
-// }
-//
-// function cdns_widget_title($title) {
-//   if ( is_admin() ) return $title;
-//
-//   return do_shortcode(htmlspecialchars_decode($title));
-// }
-// add_filter('widget_title',  'cdns_widget_title');
+
+
+
+
+
+
+
+
+function cdns_uri($relative_uri = "") {
+  return get_stylesheet_directory_uri() . $relative_uri;
+}
+
+function cdns_widget_title($title) {
+  if ( is_admin() ) return $title;
+
+  return do_shortcode(htmlspecialchars_decode($title));
+}
+add_filter('widget_title',  'cdns_widget_title');
 
 
 function cdns_the_title($title, $id = null, $qvplugin = false) {

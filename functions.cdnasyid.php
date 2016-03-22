@@ -11,8 +11,8 @@ remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_pro
 // remove emoji scripts
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
-remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-remove_action( 'admin_print_styles', 'print_emoji_styles' );
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('admin_print_styles', 'print_emoji_styles');
 
 // function cdns_html_last_filter($buffer) {
 //   // modify buffer here, and then return the updated code

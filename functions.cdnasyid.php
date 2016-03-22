@@ -14,6 +14,9 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('admin_print_scripts', 'print_emoji_detection_script');
 remove_action('admin_print_styles', 'print_emoji_styles');
 
+// don't use jetpack's og
+add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );
+
 // function cdns_html_last_filter($buffer) {
 //   // modify buffer here, and then return the updated code
 //   return str_replace('<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">', '<meta http-equiv="X-UA-Compatible" content="IE=edge">', $buffer);
@@ -210,5 +213,3 @@ add_shortcode('sf_social_share', 'cdns_social_share');
 // }
 // add_action('sf_before_page_container', 'add_fb_sdk');
 //
-
-add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );

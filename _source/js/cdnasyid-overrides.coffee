@@ -1,13 +1,13 @@
 (($) ->
 
-  # WIDGET COLORING
-  widget_colors = ['accent', 'turquoise', 'green', 'blue']
-  $('.woocommerce .widget').each (index) ->
-    $this = $(this)
-    $this.addClass('cdnclr-' + widget_colors[index % 4])
-
-  isRTL = $('body').hasClass('rtl')
-  $window = $(window)
+  # # WIDGET COLORING
+  # widget_colors = ['accent', 'turquoise', 'green', 'blue']
+  # $('.woocommerce .widget').each (index) ->
+  #   $this = $(this)
+  #   $this.addClass('cdnclr-' + widget_colors[index % 4])
+  #
+  # isRTL = $('body').hasClass('rtl')
+  # $window = $(window)
 
   # SWIFT.woocommerce._fullWidthShop = SWIFT.woocommerce.fullWidthShop
   # SWIFT.woocommerce.fullWidthShop = ->

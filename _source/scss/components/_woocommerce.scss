@@ -119,11 +119,13 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
   .title-wrap {
     margin-bottom: 2em;
 
-    h3 {
+    h3.spb-heading span {
       @include font-etica(true);
-    }
-    h3 span {
       border: 0;
+
+      &:after {
+        display: none;
+      }
     }
   }
 

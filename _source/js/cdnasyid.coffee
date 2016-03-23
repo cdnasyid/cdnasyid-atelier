@@ -38,10 +38,13 @@ class CDNS.Search
     $(document).on 'keypress.cdns.search', (e) =>
       @keypress e
 
-    $(document).on 'keyup.cdns.search', (e) ->
+    $(document).on 'keyup.cdns.search', (e) =>
       # Dismiss overlay on ESC is pressed
-      if $('#fullscreen-search').is(':visible') and e.keyCode == 27
+      if @isSearchOpen() and e.keyCode == 27
         SWIFT.header.fsSearchToggle()
+
+  isSearchOpen: ->
+    CDNS.body.hasClass('fs-search-open')
 
   keypress: (e) ->
     e = e or event
@@ -50,14 +53,18 @@ class CDNS.Search
     if nodeName == 'INPUT' or nodeName == 'TEXTAREA'
       return
 
-    if e.which != 0 and e.charCode != 0 and !e.ctrlKey and !e.metaKey and !e.altKey and e.keyCode != 27 and e.keyCode != 32
+    console.log e.which
+
+    # if e.which != 0 and e.charCode != 0 and !e.ctrlKey and !e.metaKey and !e.altKey and e.keyCode != 27 and e.keyCode != 32
+    if e.which == 115
       if CDNS.body.hasClass('overlay-menu-open')
         SWIFT.header.overlayMenuToggle()
       if CDNS.body.hasClass('fs-supersearch-open')
         SWIFT.header.fsSuperSearchToggle()
+
       SWIFT.header.fsSearchToggle()
 
-      $('#fs-search-input').focus().val(String.fromCharCode(e.keyCode | e.charCode))
+      $('#fs-search-input').focus() ##.val(String.fromCharCode(e.keyCode | e.charCode))
 
 
 class CDNS.Forms

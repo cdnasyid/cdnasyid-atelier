@@ -3204,6 +3204,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/maintenance.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/maintenance.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/package.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -3389,7 +3398,7 @@
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "cdnasyid-atelier-git",
+	"displayValue": "cdnasyid-atelier",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "harddrive_orange"
 	},

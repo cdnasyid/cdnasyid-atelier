@@ -86,10 +86,11 @@ form label,
 .woocommerce form #customer_details .form-row label,
 .control-label {
   font-family: $menu-fonts;
+  color: rgba(#222, .5);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: .75em;
-  opacity: .5;
+  // opacity: .5;
 }
 
 // .woocommerce .quantity .plus,

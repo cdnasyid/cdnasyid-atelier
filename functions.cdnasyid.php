@@ -127,8 +127,8 @@ function cdns_single_brand() {
   echo do_shortcode('[product_brand width="100px"]');
   echo '</div>';
 }
-add_action( 'woocommerce_single_product_summary', 'cdns_single_brand', 37 );
-remove_action( 'woocommerce_product_meta_end', array( $WC_Brands, 'show_brand' ) );
+// add_action( 'woocommerce_single_product_summary', 'cdns_single_brand', 37 );
+// remove_action( 'woocommerce_product_meta_end', array( $WC_Brands, 'show_brand' ) );
 
 
 function cdns_single_whatsapp() {

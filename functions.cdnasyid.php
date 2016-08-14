@@ -133,7 +133,7 @@ function cdns_single_brand() {
 
 function cdns_single_whatsapp() {
   echo '<div class="whatsapp-note">';
-  echo '<span>Order via WhatsApp at <strong>+6011&nbsp;2928&nbsp;4078</strong></span>';
+  echo '<span>Order via WhatsApp at <strong>+6019&nbsp;388&nbsp;1297</strong> (Malaysia only)</span>';
   echo '</div>';
 }
 add_action( 'woocommerce_single_product_summary', 'cdns_single_whatsapp', 32 );

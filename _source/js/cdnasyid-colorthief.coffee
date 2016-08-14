@@ -65,6 +65,7 @@ jQuery ($) ->
     color
 
   productGrid = ->
+    $('#home-hero .products .product').addClass('dark')
     $('#home-tilawah .products .product').addClass('dark')
 
     $('.woocommerce .products .product').each ->
@@ -106,6 +107,45 @@ jQuery ($) ->
       new_img.src = img.src
 
 
+  productList = ->
+    $('#home-latest .mini-list > li').addClass('dark')
+
+    $('.woocommerce .mini-list > li').each ->
+
+      $this = $(this)
+
+      is_dark = $this.hasClass('dark')
+
+      img = $this.find('figure img')[0]
+      if ( !img? ) then return
+
+      new_img = new Image
+
+      new_img.onload = ->
+        figure = $this.find('figure')
+        details = $this.find('.product-details')
+        link_title = $this.find('.product-details h5 a')
+        artist = $this.find('.product-details h5 a small strong')
+
+        if ( palette = getPalette(new_img, 4) )
+          if ( !is_dark )
+            color = getDarkColor(palette)
+          else
+            color = getLightColor(palette)
+
+
+          details.css { 'color': color.toRgbString() }
+          figure.css { 'border-color': color.toRgbString() }
+          artist.css { 'border-color': color.toRgbString() }
+
+          CDNS.log "product grid #{img.src} colors fetched."
+
+          new_img = null
+
+      new_img.crossOrigin = "Anonymous"
+      new_img.src = img.src
+
+
   productSingle = ->
     $('.woocommerce.single-product').each ->
 
@@ -127,7 +167,7 @@ jQuery ($) ->
         if ( palette = getPalette(new_img, 4) )
           colorfulBar = '<div class="colorful-bar clearfix">'
           palette.forEach (color) ->
-            colorfulBar += '<div class="col-xs-3" style="background: ' + tinycolor(color).toRgbString() + '"></div>'
+            colorfulBar += '<div class="col-xs-3" style="background: ' + color.toRgbString() + '"></div>'
           colorfulBar += '</div>'
           summary.prepend colorfulBar
 
@@ -151,4 +191,5 @@ jQuery ($) ->
       new_img.src = img.src
 
   productGrid()
+  productList()
   productSingle()

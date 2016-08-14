@@ -97,17 +97,17 @@ class CDNS.Forms
 
 class CDNS.Misc
   constructor: ->
-    @mouseAnimation()
+    # @mouseAnimation()
     @categoryDescription()
     @searchResultTitle()
     @menuPlainText()
     @productGridArtistWidth()
     @others()
 
-  mouseAnimation: ->
-    # homepage mouse animation
-    if !CDNS.isMobile()
-      $('#home-hero').append $('<div class="mouse"><div class="mouse-icon"><span class="mouse-wheel"></span></div></div>')
+  # mouseAnimation: ->
+  #   # homepage mouse animation
+  #   if !CDNS.isMobile()
+  #     $('#home-hero').append $('<div class="mouse"><div class="mouse-icon"><span class="mouse-wheel"></span></div></div>')
 
   categoryDescription: ->
     # MOVE CATEGORY DESCRIPTION TO FANCY HEADER
@@ -144,6 +144,9 @@ class CDNS.Misc
     CDNS.window.smartresize _fn
 
   others: ->
+    # Match Height
+    $('#home-latest .spb-column-container').matchHeight()
+
     # TWEAK FOR SHOP ACTION BUTTONS
     $('figure .cart-overlay .shop-actions > *').addClass('shop-action')
 

@@ -4,36 +4,56 @@
 #home-hero {
   position: relative;
 
-  .mouse {
-    position: absolute;
-    // left: calc(50% - 27px/2);
-    bottom: 0;
-    right: 0;
-    margin: 40px;
-    width: 27px;
-    z-index: 2;
-  }
+  // .mouse {
+  //   position: absolute;
+  //   // left: calc(50% - 27px/2);
+  //   bottom: 0;
+  //   right: 0;
+  //   margin: 40px;
+  //   width: 27px;
+  //   z-index: 2;
+  // }
+  //
+  // .mouse-icon {
+  //   width: 25px;
+  //   height: 40px;
+  //   border: 2px solid white;
+  //   border-radius: 15px;
+  //   // cursor: pointer;
+  //   position: relative;
+  //   text-align: center;
+  // }
+  //
+  // .mouse-wheel {
+  //   height: 8px;
+  //   margin: 2px auto 0;
+  //   display: block;
+  //   width: 3px;
+  //   background-color: white;
+  //   border-radius: 50%;
+  //   -webkit-animation: 1.6s ease infinite wheel-up-down;
+  //   -moz-animation: 1.6s ease infinite wheel-up-down;
+  //   animation: 1.6s ease infinite wheel-up-down;
+  // }
 
-  .mouse-icon {
-    width: 25px;
-    height: 40px;
-    border: 2px solid white;
-    border-radius: 15px;
-    // cursor: pointer;
-    position: relative;
-    text-align: center;
-  }
+  .home-featured {
+    @extend .bg-dark;
+    backdrop-filter: blur(50px);
+    background: transparent !important;
 
-  .mouse-wheel {
-    height: 8px;
-    margin: 2px auto 0;
-    display: block;
-    width: 3px;
-    background-color: white;
-    border-radius: 50%;
-    -webkit-animation: 1.6s ease infinite wheel-up-down;
-    -moz-animation: 1.6s ease infinite wheel-up-down;
-    animation: 1.6s ease infinite wheel-up-down;
+    &:before {
+      display: block;
+      position: absolute;
+      content:'';
+      top: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      box-shadow: 20px 0 #fff, -20px 0 #fff;
+    }
   }
 }
 
@@ -79,51 +99,61 @@
   }
 }
 
-#home-chhh {
-  display: none;
+#home-latest {
+  .home-bestsellers {
+    @extend .bg-dark;
 
-  .spb-row-container {
-    .row-overlay {
-      background-image: linear-gradient(to top right, rgba($green, .2), rgba($clr-deep-purple, .5));
-    }
+    background-color: shade($clr-deep-purple-900, 80) !important;
+    background-image: linear-gradient(to bottom left, shade($clr-deep-purple-900, 90), rgba(darken($clr-deep-purple-500, 30), .8));
 
-    blockquote {
-      position: relative;
-      margin-left: 0;
-
-      p {
-        font-size: 2rem;
-        font-weight: 400;
-        line-height: 1;
-        letter-spacing: -1px;
-      }
-
-      footer {
-        text-align: right;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        line-height: 1;
-        opacity: .4;
-      }
-
-      &:before {
-        position: absolute;
-        content: '';
-        width: 140px;
-        height: 140px;
-        background: url(../images/quote.svg) no-repeat;
-        background-size: cover;
-        opacity: .1;
-        z-index: 0;
-        top: -50px;
-        right: 0;
-      }
-    }
   }
 }
+
+// #home-chhh {
+//   display: none;
+//
+//   .spb-row-container {
+//     .row-overlay {
+//       background-image: linear-gradient(to top right, rgba($green, .2), rgba($clr-deep-purple, .5));
+//     }
+//
+//     blockquote {
+//       position: relative;
+//       margin-left: 0;
+//
+//       p {
+//         font-size: 2rem;
+//         font-weight: 400;
+//         line-height: 1;
+//         letter-spacing: -1px;
+//       }
+//
+//       footer {
+//         text-align: right;
+//         font-size: 1rem;
+//         font-style: normal;
+//         font-weight: 400;
+//         text-transform: uppercase;
+//         letter-spacing: 3px;
+//         line-height: 1;
+//         opacity: .4;
+//       }
+//
+//       &:before {
+//         position: absolute;
+//         content: '';
+//         width: 140px;
+//         height: 140px;
+//         background: url(../images/quote.svg) no-repeat;
+//         background-size: cover;
+//         opacity: .1;
+//         z-index: 0;
+//         top: -50px;
+//         right: 0;
+//       }
+//     }
+//   }
+// }
 
 #home-whatsapp {
   .spb-row-container {

@@ -1,3 +1,8 @@
+# @codekit-prepend "../../bower_components/tinycolor/dist/tinycolor-min.js"
+# @codekit-prepend "../../bower_components/color-thief/dist/color-thief.min.js"
+# @codekit-prepend "../../bower_components/matchHeight/dist/jquery.matchHeight-min.js"
+# @codekit-prepend "../../bower_components/jquery.longShadow/jquery.longShadow.js"
+
 $ = jQuery
 
 class CDNS
@@ -169,4 +174,6 @@ jQuery ($) ->
 
 # @codekit-append "cdnasyid-overrides.coffee"
 # @codekit-append "cdnasyid-colorthief.coffee"
+
+
 # @xxxcodekit-append "cdnasyid-niceform.coffee"

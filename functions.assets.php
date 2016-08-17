@@ -48,27 +48,21 @@ function cdns_scripts() {
 
   // select2
   if ( !is_checkout() ) {
-    wp_enqueue_style('cdns-select2', cdns_uri() . '/js/select2/css/select2.min.css');
-    wp_enqueue_script('cdns-select2', cdns_uri() . '/js/select2/js/select2.min.js', array(), $asset_version, true);
+    wp_enqueue_style('cdns-select2', cdns_uri() . '/bower_components/select2/dist/css/select2.min.css');
+    wp_enqueue_script('cdns-select2', cdns_uri() . '/bower_components/select2/dist/js/select2.min.js', array(), $asset_version, true);
   }
 
-  // tinycolor
-  wp_enqueue_script('cdns-tinycolor', cdns_uri() . '/js/tinycolor-min.js', array(), $asset_version, true);
-
-  // color-thief
-  wp_enqueue_script('color-cdns-thief', cdns_uri() . '/js/color-thief.min.js', array(), $asset_version, true);
-
-  // succint
-  wp_enqueue_script('cdns-succinct', cdns_uri() . '/js/jquery.succinct.min.js', array(), $asset_version, true);
-
-  // match height
-  wp_enqueue_script('cdns-matchheight', cdns_uri() . '/js/jquery.matchHeight-min.js', array(), $asset_version, true);
-
-  // long shadow
-  wp_enqueue_script('cdns-longshadow', cdns_uri() . '/js/jquery.longShadow.min.js', array(), $asset_version, true);
-
-  // smoother parallax
-  // wp_enqueue_script('cdns-parallax', cdns_uri() . '/js/parallax.js', array(), $asset_version, true);
+  // // tinycolor
+  // wp_enqueue_script('cdns-tinycolor', cdns_uri() . '/bower_components/tinycolor/dist/tinycolor-min.js', array(), $asset_version, true);
+  //
+  // // color-thief
+  // wp_enqueue_script('cdns-color-thief', cdns_uri() . '/bower_components/color-thief/dist/color-thief.min.js', array(), $asset_version, true);
+  //
+  // // match height
+  // wp_enqueue_script('cdns-matchheight', cdns_uri() . '/bower_components/matchHeight/dist/jquery.matchHeight-min.js', array(), $asset_version, true);
+  //
+  // // long shadow
+  // wp_enqueue_script('cdns-longshadow', cdns_uri() . '/bower_components/jquery.longShadow/jquery.longShadow.js', array(), $asset_version, true);
 
   // main cdnaysid's js
   wp_enqueue_script('cdnasyid', cdns_uri() . '/js/cdnasyid.min.js', array(), $asset_version, true);

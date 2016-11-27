@@ -83,6 +83,7 @@ jQuery ($) ->
         details = $this.find('.product-details')
         link_title = $this.find('.product-details h3 a')
         artist = $this.find('.product-details h3 a small strong')
+        countdown = $this.find('.product-details span.kkcountdown')
 
         if ( palette = getPalette(new_img, 4) )
           colorfulBar = '<div class="colorful-bar clearfix">'
@@ -98,6 +99,7 @@ jQuery ($) ->
 
           details.css { 'color': color.toRgbString() }
           artist.css { 'border-color': color.setAlpha(.5).toRgbString() }
+          countdown.css { 'border-color': color.setAlpha(.5).toRgbString() }
 
           CDNS.log "product grid #{img.src} colors fetched."
 

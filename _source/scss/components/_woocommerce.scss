@@ -239,7 +239,7 @@ body.woocommerce-wishlist[class*="header-naked"] .inner-page-wrap {
   }
 }
 
-.spb-row-container.spb-row-full-width .spb-column-container .row {
+.spb-row .spb-column-container .row {
   padding: 0 !important;
 
   .product_list_widget.woocommerce {
@@ -761,6 +761,14 @@ span.amount .amount-decimal {
       .product-navigation .nav-previous,
       .product-navigation .nav-next {
       }
+    }
+
+    p.stock.in-stock {
+      display: none;
+    }
+
+    p.stock.out-of-stock {
+      display: block;
     }
 
     .product-price-wrap {
@@ -1339,3 +1347,53 @@ table.shop_table tr.total td {
     margin-top: 30px;
   }
 }
+
+.sales-countdown {
+  display: block;
+  margin-top: 0;
+  color: #222;
+  font-size: .7em;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  text-transform: uppercase;
+
+  .bg-dark & {
+    color: #fff;
+  }
+
+  .ends-in {
+    opacity: .5;
+  }
+
+  .days {
+    font-weight: 500;
+  }
+}
+//
+// .kkcountdown {
+//   display: inline-block;
+//   border: 1px solid rgba(#fff, .5);
+//   border-color: inherit;
+//   border-radius: 3px;
+//   margin-top: .5em;
+//   font-size: .7em;
+//   font-weight: 500;
+//   line-height: 1;
+//   letter-spacing: 1px;
+//   text-transform: uppercase;
+//   padding: 3px;
+//
+//   .ends-in {
+//     padding-right: 4px;
+//   }
+//
+//   .kkcountdown-box {
+//     display: inline-block;
+//     // padding: 4px;
+//
+//     .kkc-days,
+//     .kkc-hours {
+//       margin-right: 3px;
+//     }
+//   }
+// }

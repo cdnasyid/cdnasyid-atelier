@@ -1,7 +1,8 @@
 # @codekit-prepend "../../bower_components/tinycolor/dist/tinycolor-min.js"
 # @codekit-prepend "../../bower_components/color-thief/dist/color-thief.min.js"
 # @codekit-prepend "../../bower_components/matchHeight/dist/jquery.matchHeight-min.js"
-# @codekit-prepend "../../bower_components/jquery.longShadow/jquery.longShadow.js"
+# @--- codekit-prepend "../../bower_components/jquery.longShadow/jquery.longShadow.js"
+# @--- codekit-prepend "../../js/kkcountdown.js"
 
 $ = jQuery
 
@@ -107,6 +108,7 @@ class CDNS.Misc
     @searchResultTitle()
     @menuPlainText()
     @productGridArtistWidth()
+    # @salesCountdown()
     @others()
 
   # mouseAnimation: ->
@@ -148,6 +150,9 @@ class CDNS.Misc
     _fn()
     CDNS.window.smartresize _fn
 
+  # salesCountdown: ->
+  #   $(".kkcountdown").kkcountdown()
+
   others: ->
     # Match Height
     $('#home-latest .spb-column-container').matchHeight()
@@ -156,11 +161,11 @@ class CDNS.Misc
     $('figure .cart-overlay .shop-actions > *').addClass('shop-action')
 
     # LONG SHADOW
-    $('.footer-social-1, .footer-social-2').longShadow {
-      colorShadow: '#211537'
-      sizeShadow: 400
-      directionShadow: 'bottom-right'
-    }
+    # $('.footer-social-1, .footer-social-2').longShadow {
+    #   colorShadow: '#211537'
+    #   sizeShadow: 400
+    #   directionShadow: 'bottom-right'
+    # }
 
     # TILAWAH MORE LINK
     $('#home-tilawah .woocommerce.product_list_widget').before('<div class="more-link"><a href="/product-category/tilawah">View all</a></div>')

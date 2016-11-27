@@ -127,8 +127,8 @@ function cdns_single_brand() {
   echo do_shortcode('[product_brand width="100px"]');
   echo '</div>';
 }
-// add_action( 'woocommerce_single_product_summary', 'cdns_single_brand', 37 );
-// remove_action( 'woocommerce_product_meta_end', array( $WC_Brands, 'show_brand' ) );
+add_action( 'woocommerce_single_product_summary', 'cdns_single_brand', 37 );
+remove_action( 'woocommerce_product_meta_end', array( $WC_Brands, 'show_brand' ) );
 
 
 function cdns_single_whatsapp() {
@@ -165,6 +165,32 @@ function cdns_sale_saving_badge($string, $post, $product) {
   return '<span class="onsale">Save ' . $percent . '%</span>';
 }
 add_filter('woocommerce_sale_flash', 'cdns_sale_saving_badge', 10, 3);
+
+
+
+function cdns_countdown_sales() {
+  global $post;
+  $sale_price_dates_to = $date = get_post_meta( $post->ID, '_sale_price_dates_to', true );
+
+  if ($sale_price_dates_to) {
+
+    $now = new DateTime('NOW');
+    $until = new DateTime("@$sale_price_dates_to");
+
+    $timestamp = $until->getTimestamp() - $now->getTimestamp();
+
+    $diff = $until->diff($now);
+
+    if ($timestamp > 0 && $diff->d > 1)
+      $ends = $diff->d . ' days';
+    else
+      $ends = 'less than a day';
+
+    if ($timestamp > 0)
+      echo '<span class="sales-countdown" data-time="' . $sale_price_dates_to . '"><span class="ends-in">Ends in</span> <span class="days">' . $ends . '</span></span>';
+  }
+}
+add_action( 'woocommerce_after_shop_loop_item_title', 'cdns_countdown_sales', 20 );
 
 
 function cdns_social_share($atts = null) {

@@ -19,6 +19,8 @@
     "tinycolor": "^1.4.1",
     "color-thief": "^2.0.1",
     "matchHeight": "^0.7.0",
-    "jquery.longShadow": "https://github.com/dangvanthanh/jquery.longShadow.git"
+    "jquery.longShadow": "https://github.com/dangvanthanh/jquery.longShadow.git",
+    "jquery.countdown": "^2.2.0",
+    "kkcountdown": "^1.4.2"
   }
 }

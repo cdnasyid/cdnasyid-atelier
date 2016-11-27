@@ -126,3 +126,20 @@ nav.std-menu li.account-item > ul.sub-menu {
 //   //   opacity: 1;
 //   // }
 // }
+
+nav#main-navigation ul.menu > li.sf-menu-item-new-badge > a {
+  &:before {
+    top: auto;
+    bottom: 10px;
+    box-shadow: inset -2px -2px #4caf50 !important;
+    left: 18px;
+    right: auto;
+  }
+  &:after {
+    content: "New!";
+    top: auto;
+    bottom: -4px;
+    left: 14px;
+    right: auto;
+  }
+}
